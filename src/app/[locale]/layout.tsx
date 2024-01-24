@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { Lato } from "next/font/google";
+import "../globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+
+const fontLato = Lato({ subsets: ['latin-ext'], weight: '400' });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -11,12 +12,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params: { locale },
 }: Readonly<{
   children: React.ReactNode;
+  params: {locale: string}
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang={locale}>
+      <body className={fontLato.className}>{children}</body>
     </html>
   );
 }
