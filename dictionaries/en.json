@@ -1,3 +1,11 @@
 {
-  "hello": { "hello": "hello!" }
+  "main": { "placeholder": "Homepage placeholder" },
+  "Metadata": { "title": "Homebrew Recipe Builder" },
+  "link-list": {
+    "my-recipies": "My recipies",
+    "public-recipies": "All recipies",
+    "recipe-builder": "Build recipe",
+    "calculators": "Calculators",
+    "contact": "Contact"
+  }
 }
