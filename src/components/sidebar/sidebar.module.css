@@ -6,11 +6,22 @@
 }
 .link {
   height: fit-content;
-  overflow: hidden;
   width: 100%;
-  border-radius: 100px;
+  border-radius: 50px;
 }
 .image {
   max-width: 100%;
-  border-radius: 100px;
+  border-radius: 80px;
+}
+
+.wrapper {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.wrapper button {
+  height: 3rem;
+  border-radius: 10px;
+  cursor: pointer;
 }

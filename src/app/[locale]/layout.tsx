@@ -1,7 +1,8 @@
 import { Lato } from "next/font/google";
 import "../globals.css";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
-import BaseLayout from "@components/layouts/base-layout";
+import { locales } from "@/navigation";
+import BaseLayout from "@/components/layouts/base-layout";
 
 const fontLato = Lato({ subsets: ["latin-ext"], weight: "400" });
 
@@ -16,7 +17,9 @@ export async function generateMetadata({
     title: t("title"),
   };
 }
-
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 export default function RootLayout({
   children,
   params: { locale },
@@ -27,14 +30,7 @@ export default function RootLayout({
   unstable_setRequestLocale(locale);
   return (
     <html lang={locale}>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100"
-        rel="stylesheet"
-      />
-      ;
-      <body className={fontLato.className}>
-        <BaseLayout>{children}</BaseLayout>
-      </body>
+      <body className={fontLato.className}><BaseLayout>{children}</BaseLayout></body>
     </html>
   );
 }

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Link } from "@/navigation";
 import LinkList from "./link-list";
 
-export default function Sidebar() {
+export const Sidebar = () => {
   return (
     <div className={styles.sidebar}>
       <Link
@@ -11,6 +11,7 @@ export default function Sidebar() {
         href="/"
       >
         <Image
+          priority={true}
           className={styles.image}
           src="/logo.PNG"
           alt="Platypus' homebrewing logo"
@@ -18,7 +19,9 @@ export default function Sidebar() {
           height="200"
         />
       </Link>
-      <LinkList />
+      <div className={styles.wrapper}>
+        <LinkList />
+      </div>
     </div>
   );
-}
+};

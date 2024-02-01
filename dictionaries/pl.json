@@ -1,9 +1,8 @@
 {
-  "main": { "placeholder": "placeholder strony głównej" },
   "Metadata": { "title": "Dziennik piwowarski" },
   "link-list": {
-    "my-recipies": "Moje receptury",
-    "public-recipies": "Wszystkie receptury",
+    "my-recipes": "Moje receptury",
+    "public-recipes": "Wszystkie receptury",
     "recipe-builder": "Stwórz recepturę",
     "calculators": "Kalkulatory",
     "contact": "Kontakt"

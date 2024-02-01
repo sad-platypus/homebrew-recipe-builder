@@ -1,3 +1,5 @@
-export default function Calculators (){
-   return <p>placeholder</p>
+import { Calculators } from "@/features/calculators/calculators";
+
+export default function CalculatorsPage() {
+  return <Calculators />;
 }
