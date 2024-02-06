@@ -1,5 +1,8 @@
 {
   "Metadata": { "title": "Homebrew Recipe Builder" },
+  "sidebar": {
+    "image": "Logo of Platypus' Hoberew picturing mug and bottle of beer, serves as navigation link to homepage"
+  },
   "link-list": {
     "my-recipes": "My recipes",
     "public-recipes": "All recipes",

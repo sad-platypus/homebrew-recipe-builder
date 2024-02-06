@@ -7,10 +7,10 @@
   align-items: center;
   border-radius: 10px;
   background-color: rgb(255, 133, 27);
-}
-.list li {
-  width: 80%;
-  margin-bottom: 1rem;
+  li {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
 }
 .link {
   display: flex;
@@ -24,10 +24,17 @@
   font-weight: 800;
   box-shadow: 0px 0px 5px 2px rgb(0, 0, 0);
   color: black;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.082);
+  }
+  &:active {
+    box-shadow: 0px 0px 15px 2px rgb(0, 0, 0);
+  }
 }
-.link:hover {
-  background-color: rgba(255, 255, 255, 0.082);
-}
-.link:active {
-  box-shadow: 0px 0px 15px 2px rgb(0, 0, 0);
+
+@media only screen and (max-width: 770px) {
+  .list {
+    width: 250px;
+  }
 }

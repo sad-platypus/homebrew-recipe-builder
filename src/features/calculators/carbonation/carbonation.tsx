@@ -2,6 +2,7 @@
 
 import { Form } from '@/components/form/form';
 import { InputField } from '@/components/form/input-field/input-field';
+import { Fragment } from 'react';
 import { FieldValues } from 'react-hook-form';
 import { z } from 'zod';
 
@@ -16,12 +17,21 @@ export const Carbonation = () => {
   };
 
   return (
-    <Form
-      schema={schema}
-      onSubmit={handleSubmit}
-    >
-      <InputField name="test" />
-      <InputField name="test2" />
-    </Form>
+    <Fragment>
+      <h2>Carbonation levels</h2>
+      <Form
+        schema={schema}
+        onSubmit={handleSubmit}
+      >
+        <InputField
+          label="test"
+          name="test"
+        />
+        <InputField
+          label="also test"
+          name="test2"
+        />
+      </Form>
+    </Fragment>
   );
 };

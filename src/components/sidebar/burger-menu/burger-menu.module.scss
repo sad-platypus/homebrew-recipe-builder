@@ -1,0 +1,42 @@
+.menuButton {
+  display: block;
+  padding: 5px 10px;
+  position: fixed;
+  right: 0;
+  z-index: 100;
+  background-color: rgb(255, 133, 27);
+  border-radius: 10px;
+}
+
+.bar {
+  display: block;
+  border-radius: 60px;
+  width: 50px;
+  height: 6px;
+  background-color: rgb(211, 209, 209);
+  margin: 10px 0px;
+}
+.menuContainer {
+  input {
+    display: none;
+  }
+}
+.menuOpen {
+  z-index: 1000;
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  background-color: rgb(255, 133, 27);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 10px 2px;
+  width: 97vw;
+
+  button {
+    height: 2rem;
+    width: 2rem;
+    align-self: flex-end;
+  }
+}

@@ -1,1 +1,2 @@
-
+Personal project - an app meant as training/learning opportunity for begginer self-taught front-end dev (that'd be me).
+Main feature of this app is supposed to be kind of homebrewer's 'diary' where users can compose recipes and store them on the server, which obviously invokes feature of user profile and login/authentication. On top of that it will have public database of recipes accessible by non-logged-in visitors as well as public 'calculators' meant for basic calculations around homebrewing process.

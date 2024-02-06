@@ -1,21 +1,18 @@
-
-import styles from "./base-layout.module.css";
-import  {Sidebar}  from "@/components/sidebar/sidebar";
-import LangueageSwitcher from "../language-switcher/language-switcher";
+import styles from './base-layout.module.scss';
+import { Sidebar } from '@/components/sidebar/sidebar';
 import { ReactNode } from 'react';
+import pick from 'lodash/pick';
+import { NextIntlClientProvider, useMessages } from 'next-intl';
 
-export default function BaseLayout({
-  children,
-}: {
-  children: ReactNode;
-}) {
+export default function BaseLayout({ children }: { children: ReactNode }) {
+  const translations = useMessages();
+
   return (
     <div className={styles.wrapper}>
-      <Sidebar />
-      <div className={styles.content}>
-        <LangueageSwitcher />
-        {children}
-      </div>
+      <NextIntlClientProvider messages={pick(translations, 'link-list', 'sidebar')}>
+        <Sidebar />
+      </NextIntlClientProvider>
+      <div className={styles.content}>{children}</div>
     </div>
   );
 }

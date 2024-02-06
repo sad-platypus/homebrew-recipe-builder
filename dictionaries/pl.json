@@ -1,5 +1,8 @@
 {
   "Metadata": { "title": "Dziennik piwowarski" },
+  "sidebar": {
+    "image": "Logo Platypus' Hoberew przedstawiające kufel i butelkę piwa, służące jako link nawigacyjny na stronę główną."
+  },
   "link-list": {
     "my-recipes": "Moje receptury",
     "public-recipes": "Wszystkie receptury",

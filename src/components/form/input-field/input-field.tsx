@@ -1,27 +1,40 @@
 import { FieldWrapper } from '../field-wrapper/field-wrapper';
-import { FieldError, FieldValues, useFormContext } from 'react-hook-form';
+import { useFormContext } from 'react-hook-form';
 
 type InputFieldProps = {
   label?: string;
   className?: string;
-  error?: FieldError | undefined;
   name: string;
+  type: 'text' | 'number';
 };
 
-export const InputField = ({ label, className, name }: InputFieldProps) => {
+type FormData = {
+  [key: string]: string;
+};
+
+export const InputField = ({
+  label,
+  className,
+  name,
+  type,
+}: InputFieldProps) => {
   const {
     register,
     formState: { errors },
-  } = useFormContext();
+  } = useFormContext<FormData>();
 
-  const fieldError = errors[name] as FieldError; //ogarnąć to chujstwo
+  const fieldError = errors[name];
+  
   return (
     <FieldWrapper
       className={className}
       label={label}
       error={fieldError}
     >
-      <input {...register(name)} />
+      <input
+        type={type}
+        {...register(name)}
+      />
     </FieldWrapper>
   );
 };
