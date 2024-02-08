@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
-import LinkList from '../link-list/link-list';
+import { LinkList } from '../link-list/link-list';
 import styles from './burger-menu.module.scss';
-import LangueageSwitcher from '@/components/language-switcher/language-switcher';
+import { LangueageSwitcher } from '@/components/language-switcher/language-switcher';
 import { LoginButton } from '../login-button/login-button';
 
 export const BurgerMenu = () => {
@@ -35,12 +35,12 @@ export const BurgerMenu = () => {
     <div className={styles.menuContainer}>
       <input
         type="checkbox"
-        id="menu-toggle"
+        id="menuToggle"
         checked={isMenuOpen}
         onChange={() => setIsMenuOpen(true)}
       />
       <label
-        htmlFor="menu-toggle"
+        htmlFor="menuToggle"
         className={styles.menuButton}
       >
         <span className={styles.bar}></span>
@@ -55,7 +55,7 @@ export const BurgerMenu = () => {
           <button onClick={() => setIsMenuOpen(false)}>X</button>
           <LinkList onLinkClick={handleMenuClick} />
           <LangueageSwitcher />
-          <LoginButton />
+          <LoginButton onClick={() => setIsMenuOpen(false)} />
         </div>
       )}
     </div>

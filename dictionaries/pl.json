@@ -9,5 +9,22 @@
     "recipe-builder": "Stwórz recepturę",
     "calculators": "Kalkulatory",
     "contact": "Kontakt"
+  },
+  "login": {
+    "button": "ZALOGUJ"
+  },
+  "calculators": {
+    "title": "Kalkulatory"
+  },
+  "carbonation": {
+    "title": "Poziom nagazowania",
+    "volume": "Objętośc piwa [litry]",
+    "desired": "Oczekiwane nagazowanie  [objętości CO\u2082]",
+    "temperature": "Temperatura piwa [\u00B0C]",
+    "glucoseMH": "Glukoza (monohydrat)",
+    "glucose": "Glukoza (bezwodna)",
+    "saccharose": "Sacharoza",
+    "DME": "Suchy ekstrakt słodowy",
+    "sugar": "Rodzaj surowca do refermentaji"
   }
 }

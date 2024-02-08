@@ -5,7 +5,7 @@ import styles from './link-list.module.scss';
 type LinkListProps = {
   onLinkClick?: () => void;
 };
-export default function LinkList({ onLinkClick }: LinkListProps) {
+export const LinkList = ({ onLinkClick }: LinkListProps) => {
   const t = useTranslations('link-list');
 
   const paths = [
@@ -18,7 +18,7 @@ export default function LinkList({ onLinkClick }: LinkListProps) {
     { url: 'calculators', text: t('calculators') },
     { url: 'contact', text: t('contact') },
   ];
-  
+
   const handleClick = () => {
     onLinkClick && onLinkClick();
   };
@@ -41,4 +41,4 @@ export default function LinkList({ onLinkClick }: LinkListProps) {
   });
 
   return <ul className={styles.list}>{list}</ul>;
-}
+};

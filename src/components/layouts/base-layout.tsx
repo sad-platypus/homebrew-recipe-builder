@@ -1,7 +1,7 @@
 import styles from './base-layout.module.scss';
 import { Sidebar } from '@/components/sidebar/sidebar';
 import { ReactNode } from 'react';
-import pick from 'lodash/pick';
+import { pick } from 'lodash';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 
 export default function BaseLayout({ children }: { children: ReactNode }) {
@@ -9,7 +9,9 @@ export default function BaseLayout({ children }: { children: ReactNode }) {
 
   return (
     <div className={styles.wrapper}>
-      <NextIntlClientProvider messages={pick(translations, 'link-list', 'sidebar')}>
+      <NextIntlClientProvider
+        messages={pick(translations, 'link-list', 'sidebar', 'login')}
+      >
         <Sidebar />
       </NextIntlClientProvider>
       <div className={styles.content}>{children}</div>

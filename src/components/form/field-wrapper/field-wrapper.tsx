@@ -10,15 +10,15 @@ type FieldWrapperProps = {
 export const FieldWrapper = ({
   children,
   label,
-  className,
   error,
 }: PropsWithChildren<FieldWrapperProps>) => {
   return (
     <Fragment>
-      <label className={className}>{label}</label>
+      <label className={styles.label}>{label}</label>
       {children}
       {error?.message && (
         <div
+          className={styles.alert}
           role="alert"
           aria-label={error.message}
         >

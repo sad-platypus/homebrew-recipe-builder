@@ -1,39 +1,47 @@
 import { FieldWrapper } from '../field-wrapper/field-wrapper';
 import { useFormContext } from 'react-hook-form';
+import styles from './input-field.module.scss';
+import { boolean } from 'zod';
 
-type InputFieldProps = {
-  label?: string;
-  className?: string;
+type InputFieldProps<T> = {
+  label: string;
   name: string;
-  type: 'text' | 'number';
-};
+  type?: 'text' | 'number';
+  readOnly?: boolean;
+} & T;
 
 type FormData = {
-  [key: string]: string;
+  [key: string]: string | number;
 };
 
-export const InputField = ({
+export const InputField = <T extends object>({
   label,
-  className,
   name,
-  type,
-}: InputFieldProps) => {
+  type = 'text',
+  readOnly,
+  ...otherProps
+}: InputFieldProps<T>) => {
   const {
     register,
     formState: { errors },
   } = useFormContext<FormData>();
 
   const fieldError = errors[name];
-  
+  const isValueANumber = type === 'number' ? true : false;
+
   return (
     <FieldWrapper
-      className={className}
       label={label}
       error={fieldError}
     >
       <input
+        className={
+          errors[name] ? `${styles.input} ${styles.error}` : styles.input
+        }
         type={type}
-        {...register(name)}
+        readOnly={readOnly}
+        {...register(name, { valueAsNumber: isValueANumber })}
+        {...otherProps}
       />
     </FieldWrapper>
   );

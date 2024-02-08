@@ -4,7 +4,7 @@ import { useRouter, usePathname } from '@/navigation';
 import { useLocale } from 'next-intl';
 import styles from './language-switcher.module.css';
 
-export default function LangueageSwitcher() {
+export const LangueageSwitcher = () => {
   const router = useRouter();
   const pathname = usePathname();
   const locale = useLocale();
@@ -24,4 +24,4 @@ export default function LangueageSwitcher() {
       </select>
     </div>
   );
-}
+};

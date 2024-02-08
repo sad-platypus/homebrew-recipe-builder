@@ -3,14 +3,16 @@
   flex-direction: column;
   height: 100vh;
   position: fixed;
-  width: 200px;
+  width: 200px
 }
 .link {
   height: fit-content;
-  border-radius: 80px;
+  border-radius: 100px;
 }
 .image {
-  border-radius: 80px;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
 }
 .desktopWrapper {
   justify-content: space-between;
