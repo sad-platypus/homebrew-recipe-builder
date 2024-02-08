@@ -1,0 +1,17 @@
+.input {
+  border-radius: 10px;
+  padding: 0.2rem;
+  background-color: transparent;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+  &.error {
+    background-color: rgba(253, 0, 0, 0.301);
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .input {
+    font-size: 0.8rem;
+  }
+}

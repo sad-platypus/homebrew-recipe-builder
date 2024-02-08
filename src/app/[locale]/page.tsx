@@ -1,6 +1,5 @@
-import { useTranslations } from "next-intl";
+import { Home } from '@/features/home/home';
 
-export default function Home() {
-  const t = useTranslations('main')
-  return <main> Homepage Placeholder</main>;
+export default function HomePage() {
+  return <Home />;
 }

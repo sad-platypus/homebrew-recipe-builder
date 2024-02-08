@@ -1,3 +1,4 @@
-export default function RecipieBuilder (){
-   return <p>placeholder</p>
+import {RecipeBuilder} from "@/features/recipe-builder/recipe-builder";
+export default function RecipieBuilderPage() {
+  return <RecipeBuilder />;
 }

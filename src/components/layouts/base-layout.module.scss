@@ -1,0 +1,17 @@
+.wrapper {
+  display: flex;
+}
+.content {
+  padding: 1rem;
+  margin-left: 200px;
+  width: calc(100vw - 200px);
+}
+@media only screen and (max-width: 770px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .content {
+    margin-left: 0px;
+    width: 100vw;
+  }
+}

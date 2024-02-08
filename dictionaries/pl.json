@@ -1,11 +1,30 @@
 {
-  "main": { "placeholder": "placeholder strony głównej" },
   "Metadata": { "title": "Dziennik piwowarski" },
+  "sidebar": {
+    "image": "Logo Platypus' Hoberew przedstawiające kufel i butelkę piwa, służące jako link nawigacyjny na stronę główną."
+  },
   "link-list": {
-    "my-recipies": "Moje receptury",
-    "public-recipies": "Wszystkie receptury",
+    "my-recipes": "Moje receptury",
+    "public-recipes": "Wszystkie receptury",
     "recipe-builder": "Stwórz recepturę",
     "calculators": "Kalkulatory",
     "contact": "Kontakt"
+  },
+  "login": {
+    "button": "ZALOGUJ"
+  },
+  "calculators": {
+    "title": "Kalkulatory"
+  },
+  "carbonation": {
+    "title": "Poziom nagazowania",
+    "volume": "Objętośc piwa [litry]",
+    "desired": "Oczekiwane nagazowanie  [objętości CO\u2082]",
+    "temperature": "Temperatura piwa [\u00B0C]",
+    "glucoseMH": "Glukoza (monohydrat)",
+    "glucose": "Glukoza (bezwodna)",
+    "saccharose": "Sacharoza",
+    "DME": "Suchy ekstrakt słodowy",
+    "sugar": "Rodzaj surowca do refermentaji"
   }
 }

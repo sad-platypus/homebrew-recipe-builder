@@ -1,14 +1,19 @@
-import styles from "./base-layout.module.css";
-import Sidebar from "@/components/sidebar/sidebar";
+import styles from './base-layout.module.scss';
+import { Sidebar } from '@/components/sidebar/sidebar';
+import { ReactNode } from 'react';
+import { pick } from 'lodash';
+import { NextIntlClientProvider, useMessages } from 'next-intl';
 
-export default function BaseLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function BaseLayout({ children }: { children: ReactNode }) {
+  const translations = useMessages();
+
   return (
     <div className={styles.wrapper}>
-      <Sidebar />
+      <NextIntlClientProvider
+        messages={pick(translations, 'link-list', 'sidebar', 'login')}
+      >
+        <Sidebar />
+      </NextIntlClientProvider>
       <div className={styles.content}>{children}</div>
     </div>
   );

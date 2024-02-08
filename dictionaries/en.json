@@ -1,11 +1,30 @@
 {
-  "main": { "placeholder": "Homepage placeholder" },
   "Metadata": { "title": "Homebrew Recipe Builder" },
+  "sidebar": {
+    "image": "Logo of Platypus' Hoberew picturing mug and bottle of beer, serves as navigation link to homepage"
+  },
   "link-list": {
-    "my-recipies": "My recipies",
-    "public-recipies": "All recipies",
+    "my-recipes": "My recipes",
+    "public-recipes": "All recipes",
     "recipe-builder": "Build recipe",
     "calculators": "Calculators",
     "contact": "Contact"
+  },
+  "login": {
+    "button": "SIGN IN"
+  },
+  "calculators": {
+    "title": "Calculators"
+  },
+  "carbonation": {
+    "title": "Carbonation levels",
+    "volume": "Beer volume [liters]",
+    "desired": "Desired carbonation [CO\u2082 vol.]",
+    "temperature": "Beer temperature [\u00B0C]",
+    "glucoseMH": "Glucose (monohydrate)",
+    "glucose": "Glucose (anhydrous)",
+    "saccharose": "Saccharose (sucrose)",
+    "DME": "Dry malt extract",
+    "sugar": "Refermentation material used"
   }
 }
