@@ -28,7 +28,11 @@ export const CollapsibleWrapper = ({
         <H2>{title}</H2>
         <span>{isCollapsed ? '▼' : '▲'}</span>
       </div>
-      {!isCollapsed && <div className={`${styles.content} ${contentStyle || ''}`}>{children}</div>}
+      {!isCollapsed && (
+        <div className={`${styles.content} ${contentStyle || ''}`}>
+          {children}
+        </div>
+      )}
     </div>
   );
 };

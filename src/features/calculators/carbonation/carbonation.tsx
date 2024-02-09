@@ -1,37 +1,84 @@
 'use client';
 
+import { CollapsibleWrapper } from '@/components/collapse-wrapper/collapsible-wrapper';
+import { Button } from '@/components/elements/button/button';
 import { Form } from '@/components/form/form';
 import { InputField } from '@/components/form/input-field/input-field';
-import { Fragment } from 'react';
+import { useTranslations } from 'next-intl';
+import { SelectField } from '@/components/form/select-field/select-field';
 import { FieldValues } from 'react-hook-form';
-import { z } from 'zod';
-
-const schema = z.object({
-  test: z.string().min(4, 'too short').max(10, 'too long'),
-  test2: z.string().min(4, 'too short').max(10, 'too long'),
-});
+import { useState } from 'react';
+import { calculateCarbonation } from './calculation';
+import z from 'zod';
+import { Text } from '@/components/elements/text/text';
+import { buildSchema } from './schema';
 
 export const Carbonation = () => {
-  const handleSubmit = (data: FieldValues) => {
-    console.log(data);
+  const t = useTranslations('carbonation');
+  const carbonationSchema = buildSchema(t);
+  const sugarTypeOptions = [
+    { text: t('saccharose'), value: 0.51 },
+    { text: t('glucoseMH'), value: 0.44 },
+    { text: t('glucose'), value: 0.49 },
+    { text: t('DME'), value: 0.375 },
+  ];
+  
+  const [resultValue, setResultValue] = useState<string>('');
+  const submitHandler = (data: FieldValues) => {
+    setResultValue(calculateCarbonation(data));
   };
 
   return (
-    <Fragment>
-      <h2>Carbonation levels</h2>
+    <CollapsibleWrapper title={t('title')}>
       <Form
-        schema={schema}
-        onSubmit={handleSubmit}
+        onSubmit={submitHandler}
+        id="carbonationForm"
+        schema={carbonationSchema}
       >
         <InputField
-          label="test"
-          name="test"
+          name="beerVolume"
+          label={t('volume')}
+          type="number"
+          step={0.1}
+          min={0}
         />
         <InputField
-          label="also test"
-          name="test2"
+          name="desiredCarbonation"
+          label={t('desired')}
+          type="number"
+          step={0.1}
+          min={0}
         />
+        <InputField
+          name="beerTemperature"
+          label={t('temperature')}
+          type="number"
+          step={0.1}
+          min={0}
+        />
+        <SelectField
+          isValueANumber={true}
+          name="sugarSource"
+          label={t('sugar')}
+          options={sugarTypeOptions}
+        />
+        <InputField
+          name="carbonationResult"
+          label={t('result')}
+          type="number"
+          readOnly
+          value={resultValue}
+        />
+        <Button type="submit">{t('submit')}</Button>
       </Form>
-    </Fragment>
+      <div>
+        <Text> {t('description-p1')}</Text>
+        <Text>{t('description-p2')}</Text>
+        <Text>{t('description-p3')}</Text>
+        <Text>{t('description-p4')}</Text>
+        <Text>{t('description-p5')}</Text>
+        <Text>{t('description-p6')}</Text>
+      </div>
+    </CollapsibleWrapper>
   );
 };

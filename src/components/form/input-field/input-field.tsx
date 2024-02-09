@@ -7,7 +7,6 @@ type InputFieldProps<T> = {
   label: string;
   name: string;
   type?: 'text' | 'number';
-  readOnly?: boolean;
 } & T;
 
 type FormData = {
@@ -18,7 +17,6 @@ export const InputField = <T extends object>({
   label,
   name,
   type = 'text',
-  readOnly,
   ...otherProps
 }: InputFieldProps<T>) => {
   const {
@@ -39,7 +37,6 @@ export const InputField = <T extends object>({
           errors[name] ? `${styles.input} ${styles.error}` : styles.input
         }
         type={type}
-        readOnly={readOnly}
         {...register(name, { valueAsNumber: isValueANumber })}
         {...otherProps}
       />

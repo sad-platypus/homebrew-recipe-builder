@@ -25,6 +25,16 @@
     "glucose": "Glukoza (bezwodna)",
     "saccharose": "Sacharoza",
     "DME": "Suchy ekstrakt słodowy",
-    "sugar": "Rodzaj surowca do refermentaji"
+    "sugar": "Rodzaj surowca do refermentaji",
+    "result": "Potrzebna ilość surowca [g]",
+    "submit": "Przelicz",
+    "provide-number": "Proszę podać wartość liczbową",
+    "less-than-5": "Wartość musi być >=5",
+    "description-p1": "Kalkulator zakłada, że piwo zostało prawidłowo przefermentowane i nie pozostały w nim cukry fermentowalne.",
+    "description-p2": "W przypadku temperatury należy podać najwyższą osiągniętą przez piwo wartość.",
+    "description-p3": "Objętość piwa ograniczona do powyżej 5l, ponieważ przy niskich objętościach formuła na szacowanie resztkowego CO\u2082 na podstawie temperatury nie działa prawidłowo. Zakładam, że i tak nikt nie będzie robił mniejszych warek.",
+    "description-p4": "Jeśli nie wiesz czy Twoja glukoza jest bezwodna czy monohydratem, prawdopodobnie jest to monohydrat. Źródło cukrów nie ma znaczenia dla procesu, więc polecam sacharozę (cukier stołowy), wpływa jednak na potrzebną ilość surowca.",
+    "description-p5": "Kalkulator zakłada brak dodatkowego ciśnienia podczas fermentacji, nie uwzględnia także straty CO\u2082 na rzecz wolnej przestrzeni w fermentorze i podczas rozlewu - co może skutkować lekko zaniżonym wynikiem.",
+    "description-p6": "Jeśli Twój wynik jest ujemny to hipotetycznie wysycenie piwa po fermentacji jest już wyższe niż to które chcesz osiągnąć."
   }
 }
