@@ -58,6 +58,7 @@ export const Carbonation = () => {
           label={t('sugar')}
           options={sugarTypeOptions}
         />
+
         <InputField
           name="carbonationResult"
           label={t('result')}
