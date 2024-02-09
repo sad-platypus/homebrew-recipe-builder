@@ -59,6 +59,26 @@ export const Carbonation = () => {
           options={sugarTypeOptions}
         />
         <InputField
+          name="desiredCarbonation"
+          label={t('desired')}
+          type="number"
+          step={0.1}
+          min={0}
+        />
+        <InputField
+          name="beerTemperature"
+          label={t('temperature')}
+          type="number"
+          step={0.1}
+          min={0}
+        />
+        <SelectField
+          isValueANumber={true}
+          name="sugarSource"
+          label={t('sugar')}
+          options={sugarTypeOptions}
+        />
+        <InputField
           name="carbonationResult"
           label={t('result')}
           type="number"
