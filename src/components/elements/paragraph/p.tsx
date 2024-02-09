@@ -1,19 +1,19 @@
 import { PropsWithChildren } from 'react';
 import styles from './text.module.scss';
 
-type TextProps = {
+type PProps = {
   id?: string;
   className?: string;
   ariaLabel?: string;
 };
 
-export const Text = ({
+export const P = ({
   children,
   id,
   className,
   ariaLabel,
   ...otherProps
-}: PropsWithChildren<TextProps>) => {
+}: PropsWithChildren<PProps>) => {
   return (
     <p
       className={`${styles.text} ${className || ''}`}

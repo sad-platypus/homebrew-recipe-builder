@@ -1,5 +1,5 @@
 import styles from './base-layout.module.scss';
-import { Sidebar } from '@/components/sidebar/sidebar';
+import { Sidebar } from '@/components/sidebar';
 import { ReactNode } from 'react';
 import { pick } from 'lodash';
 import { NextIntlClientProvider, useMessages } from 'next-intl';

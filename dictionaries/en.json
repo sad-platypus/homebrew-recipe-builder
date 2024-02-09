@@ -23,8 +23,19 @@
     "temperature": "Beer temperature [\u00B0C]",
     "glucoseMH": "Glucose (monohydrate)",
     "glucose": "Glucose (anhydrous)",
-    "saccharose": "Saccharose (sucrose)",
+    "saccharose": "Saccharose",
     "DME": "Dry malt extract",
-    "sugar": "Refermentation material used"
+    "sugar": "Refermentation material used",
+    "result": "Amount of sugar required [g]",
+    "submit": "Calculate",
+    "provide-number": "Please provide numerical value",
+    "less-than-5": "Value must be >=5",
+    "description-p1": "The calculator assumes that the beer has been properly fermented, and there are no residual fermentable sugars left in it.",
+    "description-p2": "For temperature, please provide the highest value achieved by the beer.",
+    "description-p3": "Beer volume limited to above 5 liters because at low volumes, the formula for estimating residual CO\u2082 based on temperature does not work correctly. I assume that nobody will brew smaller batches anyway.",
+    "description-p4": "If you are unsure whether your glucose is anhydrous or a monohydrate, it is likely a monohydrate. The sugar source does not matter for the process, so I recommend saccharose/sucrose (table sugar), but it does affect the you need to add.",
+    "description-p5": "The calculator assumes no additional pressure during fermentation, so if you ferment under higher pressure result will be most likely too high. It does not account for CO\u2082 loss to the headspace in standard fermenter and during packaging, which may result in a slightly underestimated result.",
+    "description-p6": "If your result is negative, hypothetically, the beer's carbonation after fermentation is already higher than what you intend to achieve.",
+    "description-p7": "Typical beer carbonation usually falls within the range of 2-3 volumes of CO\u2082, and I don't recommend exceeding 2.5 in home brewery, unless you are certain about the strength of the bottles and know what you are doing."
   }
 }

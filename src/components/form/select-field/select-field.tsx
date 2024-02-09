@@ -33,6 +33,7 @@ export const SelectField = <T extends object>({
   const selectOptions = options.map((option) => {
     return (
       <option
+        key={`${name}_${option.text}`}
         selected={option.isSelected}
         disabled={option.isDisabled}
         value={option.value}

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { LinkList } from '../link-list/link-list';
 import styles from './burger-menu.module.scss';
-import { LangueageSwitcher } from '@/components/language-switcher/language-switcher';
+import { LangueageSwitcher } from '@/components/language-switcher/';
 import { LoginButton } from '../login-button/login-button';
 
 export const BurgerMenu = () => {
