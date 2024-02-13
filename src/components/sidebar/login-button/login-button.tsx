@@ -6,7 +6,7 @@ type LoginButtonProps = {
   onClick?: () => void;
 };
 export const LoginButton = ({ onClick }: LoginButtonProps) => {
-  const t = useTranslations('login');
+  const t = useTranslations('sidebar.login');
   return (
     <Link
       onClick={onClick}

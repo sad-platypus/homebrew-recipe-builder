@@ -6,7 +6,7 @@ type LinkListProps = {
   onLinkClick?: () => void;
 };
 export const LinkList = ({ onLinkClick }: LinkListProps) => {
-  const t = useTranslations('link-list');
+  const t = useTranslations('sidebar.link-list');
 
   const paths = [
     { url: 'my-recipes', text: t('my-recipes') },

@@ -1,6 +1,6 @@
 import { PropsWithChildren, useState } from 'react';
 import styles from './collapsible-wrapper.module.scss';
-import { H2 } from '../elements/headers/h2';
+import { H2 } from '../elements';
 
 type CollapsibleWrapperProps = {
   title: string;

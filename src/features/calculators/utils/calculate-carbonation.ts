@@ -11,8 +11,7 @@ export const calculateCarbonation = (data: FieldValues) => {
   const CO2VolumesToGrams = 1.969;
   const requiredCO2Grams =
     (desiredCarbonation - postFermentationCO2) * CO2VolumesToGrams * beerVolume;
-  const calculationResult = (
-    requiredCO2Grams / gramsOfCO2PerGramOfSugar
-  ).toFixed(1);
-  return calculationResult;
+  const calculationResult = requiredCO2Grams / gramsOfCO2PerGramOfSugar;
+
+  return calculationResult.toFixed(0);
 };

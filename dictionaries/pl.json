@@ -1,41 +1,71 @@
 {
   "Metadata": { "title": "Dziennik piwowarski" },
   "sidebar": {
-    "image": "Logo Platypus' Hoberew przedstawiające kufel i butelkę piwa, służące jako link nawigacyjny na stronę główną."
+    "image": "Logo Platypus' Hoberew przedstawiające kufel i butelkę piwa, służące jako link nawigacyjny na stronę główną.",
+    "link-list": {
+      "my-recipes": "Moje receptury",
+      "public-recipes": "Wszystkie receptury",
+      "recipe-builder": "Stwórz recepturę",
+      "calculators": "Kalkulatory",
+      "contact": "Kontakt"
+    },
+    "login": {
+      "button": "ZALOGUJ"
+    }
   },
-  "link-list": {
-    "my-recipes": "Moje receptury",
-    "public-recipes": "Wszystkie receptury",
-    "recipe-builder": "Stwórz recepturę",
-    "calculators": "Kalkulatory",
-    "contact": "Kontakt"
-  },
-  "login": {
-    "button": "ZALOGUJ"
-  },
+
   "calculators": {
-    "title": "Kalkulatory"
-  },
-  "carbonation": {
-    "title": "Poziom nagazowania",
-    "volume": "Objętośc piwa [litry]",
-    "desired": "Oczekiwane nagazowanie  [objętości CO\u2082]",
-    "temperature": "Temperatura piwa [\u00B0C]",
-    "glucoseMH": "Glukoza (monohydrat)",
-    "glucose": "Glukoza (bezwodna)",
-    "saccharose": "Sacharoza",
-    "DME": "Suchy ekstrakt słodowy",
-    "sugar": "Rodzaj surowca do refermentaji",
-    "result": "Potrzebna ilość surowca [g]",
-    "submit": "Przelicz",
-    "provide-number": "Proszę podać wartość liczbową",
-    "less-than-5": "Wartość musi być >=5",
-    "description-p1": "Kalkulator zakłada, że piwo zostało prawidłowo przefermentowane i nie pozostały w nim cukry fermentowalne.",
-    "description-p2": "W przypadku temperatury należy podać najwyższą osiągniętą przez piwo wartość.",
-    "description-p3": "Objętość piwa ograniczona do powyżej 5l, ponieważ przy niskich objętościach formuła na szacowanie resztkowego CO\u2082 na podstawie temperatury nie działa prawidłowo. Zakładam, że i tak nikt nie będzie robił mniejszych warek.",
-    "description-p4": "Jeśli nie wiesz czy Twoja glukoza jest bezwodna czy monohydratem, prawdopodobnie jest to monohydrat. Źródło cukrów nie ma znaczenia dla procesu, więc polecam sacharozę (cukier stołowy), wpływa jednak na potrzebną ilość surowca.",
-    "description-p5": "Kalkulator zakłada brak dodatkowego ciśnienia podczas fermentacji, więc jeśli fermentujesz pod ciśnieniem wynik będzie prawdopodobnie zbyt wysoki. Nie uwzględnia także straty CO\u2082 na rzecz wolnej przestrzeni w fermentorze i podczas rozlewu - co może skutkować lekko zaniżonym wynikiem.",
-    "description-p6": "Jeśli Twój wynik jest ujemny to hipotetycznie wysycenie piwa po fermentacji jest już wyższe niż to które chcesz osiągnąć."
-    ,"description-p7": "Typowe nagazowanie piwa najczęsciej mieści się w zakrasie 2-3 objętości CO\u2082., w warunkach domowych nie polecam przekraczania 2.5 o ile nie jesteś pewien wytrzymałości butelek i wiesz co robisz."
+    "title": "Kalkulatory",
+    "errors": {
+      "provide-number": "Proszę podać wartość liczbową!",
+      "negative-error": "Proszę podać wartość >0.",
+      "less-than-5": "Wartość musi być >=5",
+      "higher-fg": "Nie może być wyższy niż ekstrakt początkowy!"
+    },
+    "carbonation": {
+      "title": "Poziom nagazowania",
+      "volume": "Objętośc piwa [litry]",
+      "desired": "Oczekiwane nagazowanie  [objętości CO\u2082]",
+      "temperature": "Temperatura piwa [\u00B0C]",
+      "glucoseMH": "Glukoza (monohydrat)",
+      "glucose": "Glukoza (bezwodna)",
+      "saccharose": "Sacharoza",
+      "DME": "Suchy ekstrakt słodowy",
+      "sugar": "Rodzaj surowca do refermentaji",
+      "result": "Potrzebna ilość surowca [g]",
+      "submit": "Przelicz",
+      "description-p1": "Kalkulator zakłada, że piwo zostało prawidłowo przefermentowane i nie pozostały w nim cukry fermentowalne.",
+      "description-p2": "W przypadku temperatury należy podać najwyższą osiągniętą przez piwo wartość.",
+      "description-p3": "Objętość piwa ograniczona do powyżej 5l, ponieważ przy niskich objętościach formuła na szacowanie resztkowego CO\u2082 na podstawie temperatury nie działa prawidłowo. Zakładam, że i tak nikt nie będzie robił mniejszych warek.",
+      "description-p4": "Jeśli nie wiesz czy Twoja glukoza jest bezwodna czy monohydratem, prawdopodobnie jest to monohydrat.",
+      "description-p5": "Kalkulator zakłada brak dodatkowego ciśnienia podczas fermentacji, więc jeśli fermentujesz pod ciśnieniem wynik będzie prawdopodobnie zbyt wysoki. Nie uwzględnia także straty CO\u2082 na rzecz wolnej przestrzeni w fermentorze i podczas rozlewu - co może skutkować lekko zaniżonym wynikiem.",
+      "description-p6": "Jeśli Twój wynik jest ujemny to, hipotetycznie, wysycenie piwa po fermentacji jest już wyższe niż to, które chcesz osiągnąć.",
+      "description-p7": "Typowe nagazowanie piwa najczęsciej mieści się w zakrasie 2-3 objętości CO\u2082., w warunkach domowych nie polecam przekraczania 2.5 o ile nie jesteś pewien wytrzymałości butelek i wiesz co robisz."
+    },
+    "abv": {
+      "title": "Zawartość alkoholu",
+      "OG": "Ekstrakt początkowy [\u00B0Plato]",
+      "FG": "Ekstrakt końcowy [\u00B0Plato]",
+      "result": "Zawartość alkoholu [%v/v]",
+      "attenuation": "Stopień odfermentowania [%]",
+      "submit": "Przelicz",
+      "description-p1": "Wynik jest tylko wartością przybliżoną i może się nieznacznie różnić od wyników podawanych przez inne kalkulatory, w zależności od równania z którego korzystają.",
+      "description-p2": "Ekstrakt początkowy należy zmierzyć po wystudzeniu brzeczki, przed zadaniem drożdży. Ekstrakt końcowy należy mierzyć przed dodaniem surowaca do refermentacji.",
+      "description-p3": "Wszelkie surowce niefermentowalne typu laktoza zaburzają odczyt ekstraktu, więc jeśli zostaną dodane pomiędzy pomiarami wynik obliczeń będzie mocno przekłamany.",
+      "description-p4": "Jeśli używasz refraktometru, pamiętaj o korekcie przy pomiarze ekstraktu końcowego!"
+    },
+    "refractometer": {
+      "title": "Korekta refraktometru",
+      "brix-initial": "Odczyt początkowy [\u00B0Brix]",
+      "brix-final": "Odczyt końcowy [\u00B0Brix]",
+      "correction-factor": "Współczynnik korekcji",
+      "result-initial": "Skorygowany ekstrakt początkowy [\u00B0Plato]",
+      "result-final": "Skorygowany ekstrakt końcowy [\u00B0Plato]",
+      "submit": "Przelicz",
+      "description-p1": "Obecność alkoholu w próbce zaburza współczynnik załamania światła, który stanowi podstawę odczytu stężenia cukrów przy użyciu refraktometru. Konieczne jest dokonanie korekty dla próbki po fermentacji. Równanie użyte w kalkulatorze oparte jest na pomiarach empirycznych dokonanych przez blogera piwowarskiego (SeanTerrill).",
+      "description-p2": "Temperatura wpływa na odczyt refraktometru, dlatego też próbkę brzeczki należy schłodzić przed pomiarami.",
+      "description-p3": "Współczynnik korekcji jest indywidualny dla każdego urządzenia i powinien być wyznaczony samodzielnie: otrzymany wynik odczytu z refraktometru (dla niefermentowanej brzeczki) należy podzielić przez faktyczną zawartość ekstraktu (np. zmierzoną hydrometrem) kilkukrotnie na przestrzeni różnych warek, a następnie uśrednić. Niektóre kalkulatory przyjmują domyślny współczynnik 1.04, jednak brak jest ku temu logicznych podstaw, dopóki nie zostanie on określony samodzielnie. Prawdopodobnie lepiej przyjąć wartość 1.00, gdyż współczynnik urządzenia może być również niższy od 1.",
+      "description-p4": "W kontekście piwowarstwa domowego, jednostki Brix i Plato są praktycznie tożsame. W celu odróżnienia i przejrzystośći, \u00B0Brix są tu czysto umowne i odnoszą się do odczytu na refraktometrze, a nie rzeczywistej wartości (z pominięciem współczynnika korekcji)."
+    }
   }
 }

@@ -3,4 +3,10 @@
   flex-direction: column;
   border-radius: 10px;
   margin: 0.5rem;
+  min-width: 300px;
+}
+@media only screen and (max-width: 770px) {
+  .form {
+    min-width: auto;
+  }
 }

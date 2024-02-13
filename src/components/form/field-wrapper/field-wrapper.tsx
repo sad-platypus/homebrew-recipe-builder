@@ -13,7 +13,7 @@ export const FieldWrapper = ({
   error,
 }: PropsWithChildren<FieldWrapperProps>) => {
   return (
-    <Fragment>
+    <div className={styles.wrapper}>
       <label className={styles.label}>{label}</label>
       {children}
       {error?.message && (
@@ -25,6 +25,6 @@ export const FieldWrapper = ({
           {error.message}
         </div>
       )}
-    </Fragment>
+    </div>
   );
 };

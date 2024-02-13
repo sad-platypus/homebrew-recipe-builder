@@ -5,13 +5,14 @@ import { InputField, Form, SelectField } from '@/components/form';
 import { useTranslations } from 'next-intl';
 import { FieldValues } from 'react-hook-form';
 import { useState } from 'react';
-import { calculateCarbonation } from './calculation';
-import { buildSchema } from './schema';
+import { calculateCarbonation } from '@features/calculators/utils';
+import { useCarbonationSchema } from '@features/calculators/hooks';
+import { DescriptionWrapper } from '@/features/calculators/components';
 import { P, Button } from '@/components/elements';
 
 export const Carbonation = () => {
-  const t = useTranslations('carbonation');
-  const carbonationSchema = buildSchema(t);
+  const t = useTranslations('calculators.carbonation');
+  const carbonationSchema = useCarbonationSchema();
   const sugarTypeOptions = [
     { text: t('saccharose'), value: 0.51 },
     { text: t('glucoseMH'), value: 0.44 },
@@ -20,14 +21,14 @@ export const Carbonation = () => {
   ];
 
   const [resultValue, setResultValue] = useState<string>('');
-  const submitHandler = (data: FieldValues) => {
+  const handleSubmit = (data: FieldValues) => {
     setResultValue(calculateCarbonation(data));
   };
 
   return (
     <CollapsibleWrapper title={t('title')}>
       <Form
-        onSubmit={submitHandler}
+        onSubmit={handleSubmit}
         id="carbonationForm"
         schema={carbonationSchema}
       >
@@ -68,7 +69,7 @@ export const Carbonation = () => {
         />
         <Button type="submit">{t('submit')}</Button>
       </Form>
-      <div>
+      <DescriptionWrapper>
         <P>{t('description-p1')}</P>
         <P>{t('description-p2')}</P>
         <P>{t('description-p3')}</P>
@@ -76,7 +77,7 @@ export const Carbonation = () => {
         <P>{t('description-p5')}</P>
         <P>{t('description-p6')}</P>
         <P>{t('description-p7')}</P>
-      </div>
+      </DescriptionWrapper>
     </CollapsibleWrapper>
   );
 };
