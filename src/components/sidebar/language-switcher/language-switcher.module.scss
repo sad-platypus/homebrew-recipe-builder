@@ -1,0 +1,14 @@
+@import '/src/_variables.scss';
+
+.wrapper select {
+  height: 2rem;
+  background-color: $accent-color;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  width: 200px;
+  border: none;
+  &:hover {
+    cursor: pointer;
+  }
+}

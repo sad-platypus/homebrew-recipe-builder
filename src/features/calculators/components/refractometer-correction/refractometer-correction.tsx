@@ -33,23 +33,21 @@ export const RefractometerCorrection = () => {
           label={t('brix-initial')}
           name="brixInitial"
           type="number"
-          min={0}
           step={0.1}
         />
         <InputField
           label={t('brix-final')}
           name="brixFinal"
           type="number"
-          min={0}
           step={0.1}
         />
         <InputField
           label={t('correction-factor')}
           name="correctionFactor"
           type="number"
-          min={0}
           step={0.001}
         />
+        <Button type="submit">{t('submit')}</Button>
         <InputField
           label={t('result-initial')}
           name="initialPlatoResult"
@@ -62,7 +60,6 @@ export const RefractometerCorrection = () => {
           readOnly
           value={finalPlato}
         />
-        <Button type="submit">{t('submit')}</Button>
       </Form>
       <DescriptionWrapper>
         <P>{t('description-p1')}</P>

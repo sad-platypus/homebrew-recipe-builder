@@ -17,10 +17,12 @@
   "calculators": {
     "title": "Kalkulatory",
     "errors": {
-      "provide-number": "Proszę podać wartość liczbową!",
-      "negative-error": "Proszę podać wartość >0.",
+      "provide-number": "Proszę podać wartość liczbową",
+      "negative-error": "Proszę podać wartość >0",
+      "provide-number-array": "Proszę podać wszystkie wartości liczbowe",
+      "negative-error-array": "Wszystkie pola muszą być dodatnie",
       "less-than-5": "Wartość musi być >=5",
-      "higher-fg": "Nie może być wyższy niż ekstrakt początkowy!"
+      "higher-fg": "Nie może być wyższy niż ekstrakt początkowy"
     },
     "carbonation": {
       "title": "Poziom nagazowania",
@@ -40,7 +42,7 @@
       "description-p4": "Jeśli nie wiesz czy Twoja glukoza jest bezwodna czy monohydratem, prawdopodobnie jest to monohydrat.",
       "description-p5": "Kalkulator zakłada brak dodatkowego ciśnienia podczas fermentacji, więc jeśli fermentujesz pod ciśnieniem wynik będzie prawdopodobnie zbyt wysoki. Nie uwzględnia także straty CO\u2082 na rzecz wolnej przestrzeni w fermentorze i podczas rozlewu - co może skutkować lekko zaniżonym wynikiem.",
       "description-p6": "Jeśli Twój wynik jest ujemny to, hipotetycznie, wysycenie piwa po fermentacji jest już wyższe niż to, które chcesz osiągnąć.",
-      "description-p7": "Typowe nagazowanie piwa najczęsciej mieści się w zakrasie 2-3 objętości CO\u2082., w warunkach domowych nie polecam przekraczania 2.5 o ile nie jesteś pewien wytrzymałości butelek i wiesz co robisz."
+      "description-p7": "Typowe nagazowanie piwa najczęsciej mieści się w zakrasie 2-3 objętości CO\u2082."
     },
     "abv": {
       "title": "Zawartość alkoholu",
@@ -66,6 +68,21 @@
       "description-p2": "Temperatura wpływa na odczyt refraktometru, dlatego też próbkę brzeczki należy schłodzić przed pomiarami.",
       "description-p3": "Współczynnik korekcji jest indywidualny dla każdego urządzenia i powinien być wyznaczony samodzielnie: otrzymany wynik odczytu z refraktometru (dla niefermentowanej brzeczki) należy podzielić przez faktyczną zawartość ekstraktu (np. zmierzoną hydrometrem) kilkukrotnie na przestrzeni różnych warek, a następnie uśrednić. Niektóre kalkulatory przyjmują domyślny współczynnik 1.04, jednak brak jest ku temu logicznych podstaw, dopóki nie zostanie on określony samodzielnie. Prawdopodobnie lepiej przyjąć wartość 1.00, gdyż współczynnik urządzenia może być również niższy od 1.",
       "description-p4": "W kontekście piwowarstwa domowego, jednostki Brix i Plato są praktycznie tożsame. W celu odróżnienia i przejrzystośći, \u00B0Brix są tu czysto umowne i odnoszą się do odczytu na refraktometrze, a nie rzeczywistej wartości (z pominięciem współczynnika korekcji)."
+    },
+    "ibu": {
+      "title": "Poziom goryczki [IBU]",
+      "extract": "Ekstrakt [\u00B0Plato]",
+      "volume": "Przewidywana objętość [L]",
+      "alphaAcids": "Alfa kwasy [%]",
+      "weight": "Waga [g]",
+      "time": "Czas [min]",
+      "remove": "Usuń",
+      "append": "Dodaj chmiel",
+      "submit": "Przelicz",
+      "result": "Poziom goryczki [IBU]",
+      "description-p1": "Kalkulator wykorzystuje metodę Tinseth'a. Stałe w równaniu zostały wyznaczone empirycznie, więc nie muszą idealnie odzwierciedlać sytuacji w Twojej warzelni. W związku z tym, wynik jest raczej orientacyjny.",
+      "description-p2": "Na goryczkę w piwie wpływają także inne czynniki niż stężenie izo-alfakwasów (IBU), takie jak: chmielenie na zimno, obecność słodów palonych, dodatki..",
+      "description-p3": "Należy podać objętość, jaką przewidujemy na koniec warzenia (zakłada się, że standardowe odparowanie brzeczki to ~10% na godzinę, ale zależy ono od różnych czynników, np. powierzchnia tafli cieczy czy intensywność gotowania)."
     }
   }
 }

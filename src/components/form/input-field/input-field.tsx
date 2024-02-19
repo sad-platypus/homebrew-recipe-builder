@@ -1,24 +1,26 @@
 import { FieldWrapper } from '../field-wrapper/field-wrapper';
-import { useFormContext } from 'react-hook-form';
+import { FieldError, useFormContext } from 'react-hook-form';
 import styles from './input-field.module.scss';
+import { InputHTMLAttributes } from 'react';
 
-
-type InputFieldProps<T> = {
+type InputFieldProps = {
   label: string;
   name: string;
   type?: 'text' | 'number';
-} & T;
+  className?: string;
+} & InputHTMLAttributes<HTMLInputElement>;
 
 type FormData = {
   [key: string]: string | number;
 };
 
-export const InputField = <T extends object>({
+export const InputField = ({
   label,
   name,
   type = 'text',
+  className,
   ...otherProps
-}: InputFieldProps<T>) => {
+}: InputFieldProps) => {
   const {
     register,
     formState: { errors },
@@ -29,13 +31,12 @@ export const InputField = <T extends object>({
 
   return (
     <FieldWrapper
+      className={className}
       label={label}
-      error={fieldError}
+      errorMessage={fieldError?.message}
     >
       <input
-        className={
-          errors[name] ? `${styles.input} ${styles.error}` : styles.input
-        }
+        className={styles.input}
         type={type}
         {...register(name, { valueAsNumber: isValueANumber })}
         {...otherProps}
@@ -43,3 +44,7 @@ export const InputField = <T extends object>({
     </FieldWrapper>
   );
 };
+
+// const [array, index, fieldName]: [string, number, string] = name.split('.');
+//   const fieldError = errors[array] ? errors[array][index][fieldName] : null;
+// trzebaby zamknac w funkcji i otypowac

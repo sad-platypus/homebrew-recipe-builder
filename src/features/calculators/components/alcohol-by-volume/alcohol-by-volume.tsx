@@ -31,16 +31,15 @@ export const AlcoholByVolume = () => {
           label={t('OG')}
           name="abvOG"
           type="number"
-          min={0}
           step={0.1}
         />
         <InputField
           label={t('FG')}
           name="abvFG"
           type="number"
-          min={0}
           step={0.1}
         />
+        <Button type="submit">{t('submit')}</Button>
         <InputField
           label={t('result')}
           name="abvResult"
@@ -53,7 +52,6 @@ export const AlcoholByVolume = () => {
           readOnly
           value={attenuation}
         />
-        <Button type="submit">{t('submit')}</Button>
       </Form>
       <DescriptionWrapper>
         <P>{t('description-p1')}</P>

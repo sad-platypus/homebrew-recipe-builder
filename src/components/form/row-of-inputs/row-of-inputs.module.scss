@@ -1,0 +1,14 @@
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 4.5rem;
+}
+.alert {
+  color: red;
+  text-align: center;
+  font-weight: 300;
+}

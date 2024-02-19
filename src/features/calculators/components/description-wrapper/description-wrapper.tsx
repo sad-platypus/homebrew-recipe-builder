@@ -1,6 +1,12 @@
 import { PropsWithChildren } from 'react';
 import styles from './description-wrapper.module.scss';
 
-export const DescriptionWrapper = ({ children }: PropsWithChildren) => {
-  return <div className={styles.wrapper}>{children}</div>;
+type DescriptionWrapperProps = {
+  className?: string;
+};
+export const DescriptionWrapper = ({
+  children,
+  className,
+}: PropsWithChildren<DescriptionWrapperProps>) => {
+  return <div className={`${styles.wrapper} ${className}`}>{children}</div>;
 };

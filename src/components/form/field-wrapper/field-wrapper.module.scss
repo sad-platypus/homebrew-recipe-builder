@@ -1,12 +1,11 @@
-// .wrapper {
-//   margin-bottom: 0.5rem;
-// }
 .label {
   padding: 0.2rem;
+  text-align: center;
 }
 .alert {
   color: rgb(247, 23, 23);
   font-weight: 300;
+  text-align: center;
 }
 .wrapper {
   display: flex;
@@ -17,5 +16,8 @@
   .label,
   .alert {
     font-size: 0.8rem;
+  }
+  .wrapper {
+    min-height: 4rem;
   }
 }

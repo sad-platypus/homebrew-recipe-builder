@@ -37,21 +37,18 @@ export const Carbonation = () => {
           label={t('volume')}
           type="number"
           step={0.1}
-          min={0}
         />
         <InputField
           name="desiredCarbonation"
           label={t('desired')}
           type="number"
           step={0.1}
-          min={0}
         />
         <InputField
           name="beerTemperature"
           label={t('temperature')}
           type="number"
           step={0.1}
-          min={0}
         />
         <SelectField
           isValueANumber={true}
@@ -59,7 +56,7 @@ export const Carbonation = () => {
           label={t('sugar')}
           options={sugarTypeOptions}
         />
-
+        <Button type="submit">{t('submit')}</Button>
         <InputField
           name="carbonationResult"
           label={t('result')}
@@ -67,7 +64,6 @@ export const Carbonation = () => {
           readOnly
           value={resultValue}
         />
-        <Button type="submit">{t('submit')}</Button>
       </Form>
       <DescriptionWrapper>
         <P>{t('description-p1')}</P>

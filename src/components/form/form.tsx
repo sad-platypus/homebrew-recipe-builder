@@ -5,6 +5,7 @@ import {
   FieldValues,
   FormProvider,
   SubmitHandler,
+  UseFormReturn,
   useForm,
 } from 'react-hook-form';
 import { Schema } from 'zod';
@@ -16,6 +17,7 @@ type FormProps = {
   onSubmit?: SubmitHandler<FieldValues>;
   schema: Schema;
   id: string;
+  parentMethods?: UseFormReturn<FieldValues, any, undefined>;
 };
 
 export const Form = ({
@@ -24,8 +26,12 @@ export const Form = ({
   schema,
   id,
   onSubmit,
+  parentMethods,
 }: PropsWithChildren<FormProps>) => {
-  const methods = useForm({ resolver: zodResolver(schema) });
+  let methods;
+  parentMethods
+    ? (methods = parentMethods)
+    : (methods = useForm({ resolver: zodResolver(schema) }));
 
   const submitHandler: SubmitHandler<FieldValues> = (data) => {
     if (onSubmit) {

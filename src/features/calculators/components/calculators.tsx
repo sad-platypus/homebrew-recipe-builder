@@ -3,10 +3,9 @@ import {
   useMessages,
   useTranslations,
 } from 'next-intl';
-import { AlcoholByVolume, Carbonation } from '.';
+import { AlcoholByVolume, Carbonation, IBU, RefractometerCorrection } from '.';
 import { H1 } from '@/components/elements/headers/h1';
 import { pick } from 'lodash';
-import { RefractometerCorrection } from './refractometer-correction/refractometer-correction';
 
 export const Calculators = () => {
   const t = useTranslations('calculators');
@@ -18,6 +17,7 @@ export const Calculators = () => {
         <Carbonation />
         <AlcoholByVolume />
         <RefractometerCorrection />
+        <IBU />
       </NextIntlClientProvider>
     </>
   );

@@ -1,8 +1,16 @@
+@import '/src/variables';
+
 .select {
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 0.2rem;
-  &.error {
-    border: 2px solid red;
+  background-color: $light-background;
+  border: 1px solid;
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $dark-background;
   }
 }
 

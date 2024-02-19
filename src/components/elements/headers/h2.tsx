@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react';
-import styles from './headers.module.css';
+import styles from './headers.module.scss';
 
 type H2Props = {
   id?: string;

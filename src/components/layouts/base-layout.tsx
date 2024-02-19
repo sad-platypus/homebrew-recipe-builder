@@ -9,6 +9,7 @@ export default function BaseLayout({ children }: { children: ReactNode }) {
 
   return (
     <div className={styles.wrapper}>
+      <div className={styles.background}/>
       <NextIntlClientProvider
         messages={pick(translations, 'link-list', 'sidebar', 'login')}
       >

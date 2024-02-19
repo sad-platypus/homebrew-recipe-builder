@@ -1,28 +1,29 @@
-import { Fragment, PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 import { FieldError } from 'react-hook-form';
 import styles from './field-wrapper.module.scss';
 
 type FieldWrapperProps = {
   label?: string;
   className?: string;
-  error?: FieldError;
+  errorMessage?: string;
 };
 export const FieldWrapper = ({
   children,
   label,
-  error,
+  errorMessage,
+  className,
 }: PropsWithChildren<FieldWrapperProps>) => {
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper} ${className}`}>
       <label className={styles.label}>{label}</label>
       {children}
-      {error?.message && (
+      {errorMessage && (
         <div
           className={styles.alert}
           role="alert"
-          aria-label={error.message}
+          aria-label={errorMessage}
         >
-          {error.message}
+          {errorMessage}
         </div>
       )}
     </div>

@@ -46,12 +46,10 @@ export const SelectField = <T extends object>({
   return (
     <FieldWrapper
       label={label}
-      error={fieldError}
+      errorMessage={fieldError?.message}
     >
       <select
-        className={
-          errors[name] ? `${styles.select} ${styles.error}` : styles.select
-        }
+        className={styles.select}
         {...register(name, { valueAsNumber: isValueANumber })}
       >
         {selectOptions}
