@@ -22,30 +22,29 @@ export const CollapsibleWrapper = ({
   };
 
   return (
-    <AnimatePresence>
-      <motion.div
-        variants={basicVariants}
-        initial="initial"
-        animate="animate"
-        className={styles.wrapper}
+    <motion.div
+      variants={basicVariants}
+      initial="initial"
+      animate="animate"
+      className={styles.wrapper}
+    >
+      <div
+        onClick={toggleCollapse}
+        className={`${styles.header} ${headerStyle || ''}`}
       >
-        <div
-          onClick={toggleCollapse}
-          className={`${styles.header} ${headerStyle || ''}`}
+        <H2>{title}</H2>
+        <motion.span
+          animate={{ rotate: isOpen ? 180 : 0 }}
+          transition={{ duration: 0.4 }}
         >
-          <H2>{title}</H2>
-          <motion.span
-            animate={{ rotate: isOpen ? 180 : 0 }}
-            transition={{ duration: 0.4 }}
-          >
-            ▼
-          </motion.span>
-        </div>
-
+          ▼
+        </motion.span>
+      </div>
+      <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
+            animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.4 }}
             style={{ overflow: 'hidden' }}
@@ -54,7 +53,7 @@ export const CollapsibleWrapper = ({
             {children}
           </motion.div>
         )}
-      </motion.div>
-    </AnimatePresence>
+      </AnimatePresence>
+    </motion.div>
   );
 };

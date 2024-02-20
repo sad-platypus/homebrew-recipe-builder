@@ -45,6 +45,7 @@ export const SelectField = <T extends object>({
 
   return (
     <FieldWrapper
+    inputId={name}
       label={label}
       errorMessage={fieldError?.message}
     >

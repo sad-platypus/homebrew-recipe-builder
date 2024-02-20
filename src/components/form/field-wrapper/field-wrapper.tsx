@@ -6,16 +6,23 @@ type FieldWrapperProps = {
   label?: string;
   className?: string;
   errorMessage?: string;
+  inputId: string;
 };
 export const FieldWrapper = ({
   children,
   label,
   errorMessage,
   className,
+  inputId,
 }: PropsWithChildren<FieldWrapperProps>) => {
   return (
     <div className={`${styles.wrapper} ${className}`}>
-      <label className={styles.label}>{label}</label>
+      <label
+        htmlFor={inputId}
+        className={styles.label}
+      >
+        {label}
+      </label>
       {children}
       {errorMessage && (
         <div

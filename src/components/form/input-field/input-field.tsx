@@ -31,11 +31,13 @@ export const InputField = ({
 
   return (
     <FieldWrapper
+    inputId={name}
       className={className}
       label={label}
       errorMessage={fieldError?.message}
     >
       <input
+      id={name}
         className={styles.input}
         type={type}
         {...register(name, { valueAsNumber: isValueANumber })}

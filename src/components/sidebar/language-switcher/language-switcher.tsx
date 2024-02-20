@@ -16,6 +16,7 @@ export const LangueageSwitcher = () => {
   return (
     <div className={styles.wrapper}>
       <select
+        name="languageSwitcher"
         value={locale}
         onChange={(e) => handleChange(e)}
       >
