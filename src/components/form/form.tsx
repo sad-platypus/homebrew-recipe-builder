@@ -14,10 +14,11 @@ import styles from './form.module.scss';
 
 type FormProps = {
   className?: string;
-  onSubmit?: SubmitHandler<FieldValues>;
+  onSubmit: SubmitHandler<FieldValues>;
   schema: Schema;
   id: string;
   parentMethods?: UseFormReturn<FieldValues, any, undefined>;
+  defaultValues?: FieldValues
 };
 
 export const Form = ({
@@ -26,12 +27,9 @@ export const Form = ({
   schema,
   id,
   onSubmit,
-  parentMethods,
+  defaultValues
 }: PropsWithChildren<FormProps>) => {
-  let methods;
-  parentMethods
-    ? (methods = parentMethods)
-    : (methods = useForm({ resolver: zodResolver(schema) }));
+ const methods = useForm({resolver: zodResolver(schema), defaultValues: defaultValues })
 
   const submitHandler: SubmitHandler<FieldValues> = (data) => {
     if (onSubmit) {

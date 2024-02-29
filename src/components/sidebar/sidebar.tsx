@@ -4,7 +4,11 @@ import styles from './sidebar.module.scss';
 import Image from 'next/image';
 import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
-import { LinkList, LangueageSwitcher, LoginButton, BurgerMenu } from '.';
+import { BurgerMenu } from './burger-menu';
+import { LangueageSwitcher } from './language-switcher';
+import { LinkList } from './link-list';
+import { LoginButton } from './login-button';
+
 
 export const Sidebar = () => {
   const t = useTranslations('sidebar');

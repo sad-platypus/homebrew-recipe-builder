@@ -3,42 +3,35 @@
 import { CollapsibleWrapper } from '@/components/collapsible-wrapper';
 import { Button, P } from '@/components/elements';
 import { Form, InputField, RowOfInputs } from '@/components/form';
-import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslations } from 'next-intl';
 import styles from './ibu.module.scss';
-import { FieldValues, useFieldArray, useForm } from 'react-hook-form';
-import { DescriptionWrapper } from '..';
+import { FieldValues } from 'react-hook-form';
 import { useIBUShema } from '../../hooks';
 import { calculateIBU } from '../../utils/calculate-ibu';
 import { useState } from 'react';
+import { DescriptionWrapper } from '../description-wrapper';
+import { HopsRows } from './hops-rows';
 
 export const IBU = () => {
   const t = useTranslations('calculators.ibu');
   const schema = useIBUShema();
-  const methods = useForm<FieldValues>({
-    resolver: zodResolver(schema),
-    defaultValues: {
-      extract: null,
-      volume: null,
-      hopsRow: [{ alphAcids: null, weight: null, time: null }],
-    },
-  });
-  const { fields, append, remove } = useFieldArray({
-    control: methods.control,
-    name: 'hopsRow',
-  });
+  const defaultValues = {
+    extract: null,
+    volume: null,
+    hopsRow: [{ alphAcids: null, weight: null, time: null }],
+  };
+
   const [result, setResult] = useState('');
-  const arrayLength = fields.length;
+  const [fieldsLength, setFieldsLength] = useState(1);
   const handleSubmit = (data: FieldValues) => {
-    const result = calculateIBU(data, arrayLength);
+    const result = calculateIBU(data, fieldsLength);
     setResult(result);
   };
-  const errors = methods.formState.errors;
 
   return (
     <CollapsibleWrapper title={t('title')}>
       <Form
-        parentMethods={methods}
+        defaultValues={defaultValues}
         className={styles.form}
         onSubmit={handleSubmit}
         schema={schema}
@@ -56,52 +49,7 @@ export const IBU = () => {
           type="number"
           step={0.1}
         />
-        {fields.map((field, index) => {
-          return (
-            <RowOfInputs
-              errors={errors}
-              index={index}
-              key={field.id}
-            >
-              <InputField
-                className={styles.rowInput}
-                name={`hopsRow.${index}.alphaAcids`}
-                label={t('alphaAcids')}
-                type="number"
-                step={0.1}
-              />
-              <InputField
-                className={styles.rowInput}
-                name={`hopsRow.${index}.weight`}
-                label={t('weight')}
-                type="number"
-                step={0.1}
-              />
-              <InputField
-                className={styles.rowInput}
-                name={`hopsRow.${index}.time`}
-                label={t('time')}
-                type="number"
-                step={0.1}
-              />
-              {index > 0 ? (
-                <Button
-                  className={styles.button}
-                  onClick={() => remove(index)}
-                >
-                  {t('remove')}
-                </Button>
-              ) : null}
-            </RowOfInputs>
-          );
-        })}
-        <Button
-          type="button"
-          onClick={() => append({ alphAcids: null, weight: null, time: null })}
-        >
-          {t('append')}
-        </Button>
-
+        <HopsRows setFieldsLength={setFieldsLength} />
         <Button type="submit">{t('submit')}</Button>
         <InputField
           readOnly

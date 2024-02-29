@@ -2,7 +2,9 @@
 
 import { useEffect, useRef, useState } from 'react';
 import styles from './burger-menu.module.scss';
-import { LinkList, LangueageSwitcher, LoginButton } from '..';
+import { LangueageSwitcher } from '../language-switcher';
+import { LinkList } from '../link-list';
+import { LoginButton } from '../login-button';
 
 export const BurgerMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

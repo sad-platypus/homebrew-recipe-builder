@@ -3,9 +3,12 @@ import {
   useMessages,
   useTranslations,
 } from 'next-intl';
-import { AlcoholByVolume, Carbonation, IBU, RefractometerCorrection } from '.';
 import { H1 } from '@/components/elements/headers/h1';
 import { pick } from 'lodash';
+import { AlcoholByVolume } from './alcohol-by-volume';
+import { Carbonation } from './carbonation';
+import { IBU } from './ibu';
+import { RefractometerCorrection } from './refractometer-correction';
 
 export const Calculators = () => {
   const t = useTranslations('calculators');

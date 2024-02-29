@@ -8,7 +8,8 @@ import { useRefractometerSchema } from '@features/calculators/hooks';
 import { FieldValues } from 'react-hook-form';
 import { Button, P } from '@/components/elements';
 import { calculateRefractometer } from '@features/calculators/utils';
-import { DescriptionWrapper } from '..';
+import { DescriptionWrapper } from '../description-wrapper';
+
 
 export const RefractometerCorrection = () => {
   const t = useTranslations('calculators.refractometer');

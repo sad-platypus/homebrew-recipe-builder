@@ -7,7 +7,8 @@ import { useState } from 'react';
 import { Button, P } from '@/components/elements';
 import { FieldValues } from 'react-hook-form';
 import { calculateABV } from '../../utils';
-import { DescriptionWrapper } from '@/features/calculators/components';
+import { DescriptionWrapper } from '../description-wrapper';
+
 
 export const AlcoholByVolume = () => {
   const t = useTranslations('calculators.abv');

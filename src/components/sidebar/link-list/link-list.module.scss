@@ -1,14 +1,14 @@
 @import '/src/variables';
 
 .list {
-  padding-top: 1rem;
+  margin-top: 3rem;
   list-style: none;
   padding-left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
-  margin: 0px;
+
   li {
     width: 80%;
     margin-bottom: 1rem;
@@ -41,7 +41,7 @@
     border: 1px solid rgb(0, 0, 0);
     box-shadow: 0 0 1px 1px rgb(255, 255, 255);
     &:active {
-      box-shadow:0 0 5px 1px rgb(255, 255, 255);
+      box-shadow: 0 0 5px 1px rgb(255, 255, 255);
     }
   }
 }

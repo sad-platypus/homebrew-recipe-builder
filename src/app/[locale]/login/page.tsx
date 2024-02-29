@@ -1,5 +1,5 @@
-import { H1 } from '@/components/elements/headers/H1';
+import { Login } from '@/features/auth';
 
 export default function LoginPage() {
-  return <H1>PLAceholder</H1>;
+  return <Login />;
 }

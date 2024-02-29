@@ -7,8 +7,8 @@ import { FieldValues } from 'react-hook-form';
 import { useState } from 'react';
 import { calculateCarbonation } from '@features/calculators/utils';
 import { useCarbonationSchema } from '@features/calculators/hooks';
-import { DescriptionWrapper } from '@/features/calculators/components';
 import { P, Button } from '@/components/elements';
+import { DescriptionWrapper } from '../description-wrapper';
 
 export const Carbonation = () => {
   const t = useTranslations('calculators.carbonation');
