@@ -1,4 +1,4 @@
-@import '/src/variables';
+@import '/src/scss/colors';
 
 .sidebar {
   display: flex;
@@ -7,10 +7,7 @@
   position: fixed;
   width: 200px;
   border-radius: 10px;
-  background-color: $light-card;
-  @media (prefers-color-scheme: dark) {
-    background-color: $dark-card;
-  }
+  background-color: var(--primary-color);
 }
 .link {
   height: fit-content;

@@ -3,6 +3,7 @@ import '../globals.scss';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { locales } from '@/navigation';
 import BaseLayout from '@/components/layouts/base-layout';
+import { ThemeProvider } from '@/contexts/theme-context';
 
 const fontLato = Lato({ subsets: ['latin-ext'], weight: '400' });
 
@@ -29,11 +30,14 @@ export default function RootLayout({
   params: { locale: string };
 }>) {
   unstable_setRequestLocale(locale);
-  
+
   return (
     <html lang={locale}>
       <body className={fontLato.className}>
-        <BaseLayout>{children}</BaseLayout>
+        {' '}
+        <ThemeProvider>
+          <BaseLayout>{children}</BaseLayout>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -1,16 +1,11 @@
-@import '/src/variables';
-
 .select {
   border-radius: 5px;
   padding: 0.2rem;
-  background-color: $light-background;
-  border: 1px solid;
+  background-color: var(--secondary-color);
+  color: var(--color);
+  border: 1px solid var(--color);
   &:hover {
     cursor: pointer;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    background-color: $dark-background;
   }
 }
 

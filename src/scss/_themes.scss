@@ -1,0 +1,21 @@
+@use 'colors' as *;
+
+html[data-theme='dark'] {
+  --primary-color: #{$dark-card};
+  --secondary-color: #{$dark};
+  --color: #{$light};
+  --header: #{$dark-header};
+  --accent: #{$accent-color};
+}
+
+html[data-theme='light'] {
+  --primary-color: #{$light-card};
+  --secondary-color: #{$light};
+  --color: #{$dark};
+  --header: #{$light-header};
+  --accent: #{$accent-color};
+}
+
+html {
+  --accent: #{$accent-color};
+}

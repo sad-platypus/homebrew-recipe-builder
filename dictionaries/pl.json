@@ -9,6 +9,8 @@
       "calculators": "Kalkulatory",
       "contact": "Kontakt"
     },
+    "darkmode": "Tryb ciemny",
+    "lightmode": "Tryb jasny",
     "login": {
       "button": "ZALOGUJ"
     }
@@ -84,5 +86,6 @@
       "description-p2": "Na goryczkę w piwie wpływają także inne czynniki niż stężenie izo-alfakwasów (IBU), takie jak: chmielenie na zimno, obecność słodów palonych, dodatki..",
       "description-p3": "Należy podać objętość, jaką przewidujemy na koniec warzenia (zakłada się, że standardowe odparowanie brzeczki to ~10% na godzinę, ale zależy ono od różnych czynników, np. powierzchnia tafli cieczy czy intensywność gotowania)."
     }
-  }
+  },
+  "theme": {}
 }

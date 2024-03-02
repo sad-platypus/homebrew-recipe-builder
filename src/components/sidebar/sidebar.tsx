@@ -8,7 +8,7 @@ import { BurgerMenu } from './burger-menu';
 import { LangueageSwitcher } from './language-switcher';
 import { LinkList } from './link-list';
 import { LoginButton } from './login-button';
-
+import { ThemeSwitcher } from '../theme-switcher/theme-switcher';
 
 export const Sidebar = () => {
   const t = useTranslations('sidebar');
@@ -30,6 +30,7 @@ export const Sidebar = () => {
       <div className={styles.desktopWrapper}>
         <LinkList />
         <div>
+          <ThemeSwitcher />
           <LangueageSwitcher />
           <LoginButton />
         </div>
