@@ -1,9 +1,7 @@
-@import '/src/variables';
-
 .wrapper {
   display: flex;
   flex-direction: column;
-  background-color: $light-card;
+  background-color: var(--primary-color);
   border-radius: 10px;
   margin-bottom: 1rem;
 }
@@ -11,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   border-radius: 10px;
-  background-color: $light-header;
+  background-color: var(--header);
   &:hover {
     cursor: pointer;
   }
@@ -20,24 +18,15 @@
     align-self: center;
     margin-right: 0.5rem;
     padding: 0.7rem;
-    background-color: $accent-color;
+    background-color: var(--accent);
     border-radius: 10px;
-    color: rgb(255, 255, 255);
+    color: white;
   }
 }
 .content {
   display: flex;
   flex-direction: row;
   margin: 0.5rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  .wrapper {
-    background-color: $dark-card;
-  }
-  .header {
-    background-color: $dark-header;
-  }
 }
 
 @media only screen and (max-width: 770px) {

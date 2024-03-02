@@ -9,6 +9,8 @@
       "calculators": "Calculators",
       "contact": "Contact"
     },
+    "darkmode": "Darkmode",
+    "lightmode": "Lightmode",
     "login": {
       "button": "SIGN IN"
     }
@@ -18,7 +20,7 @@
     "title": "Calculators",
     "errors": {
       "provide-number": "Please provide numerical value",
-      "negative-error": "Please provide positive value", 
+      "negative-error": "Please provide positive value",
       "provide-number-array": "Please provide numerical value for all fields",
       "negative-error-array": "Please provide positive value for all fields",
       "less-than-5": "Value must be >=5",
@@ -84,5 +86,6 @@
       "description-p2": "Other factors besides the concentration of iso-alpha acids (IBU) also influence the bitterness in beer, such as: dry hopping, presence of roasted malts, additives.",
       "description-p3": "You should specify the volume you anticipate at the end of brewing (it is assumed that standard wort evaporation is ~10% per hour, but it depends on various factors, e.g., surface area of the liquid sheet or intensity of boiling)."
     }
-  }
+  },
+  "theme": {}
 }

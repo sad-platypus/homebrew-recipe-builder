@@ -1,19 +1,13 @@
-@import '/src/variables';
-
 .input {
   border-radius: 5px;
   padding: 0.2rem;
   background-color: transparent;
   text-align: center;
-  background-color: $light-background;
+  background-color: var(--secondary-color);
   border: none;
   margin: 0 1px;
-  border: 1px solid rgb(0, 0, 0);
-
-  @media (prefers-color-scheme: dark) {
-    background-color: $dark-background;
-    border: 1px solid rgb(255, 255, 255);
-  }
+  border: 1px solid var(--color);
+  color: var(--color);
 
   &.error {
     border: 2px solid rgb(255, 0, 0);

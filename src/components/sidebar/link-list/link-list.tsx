@@ -1,12 +1,18 @@
 import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
 import styles from './link-list.module.scss';
+import { usePathname } from 'next/navigation';
+import path from 'path';
 
 type LinkListProps = {
   onLinkClick?: () => void;
 };
 export const LinkList = ({ onLinkClick }: LinkListProps) => {
   const t = useTranslations('sidebar.link-list');
+  const pathname = usePathname();
+  const regexp = /\/(?:pl|en)\/(.*)/;
+  const matchPathname = pathname.match(regexp);
+  const pathnameWithoutLocale = matchPathname && matchPathname[1];
 
   const paths = [
     { url: 'my-recipes', text: t('my-recipes') },
@@ -30,7 +36,9 @@ export const LinkList = ({ onLinkClick }: LinkListProps) => {
         key={path.url}
       >
         <Link
-          className={styles.link}
+          className={`${styles.link} ${
+            path.url === pathnameWithoutLocale ? styles.current : null
+          }`}
           href={`/${path.url}`}
           onClick={handleClick}
         >
