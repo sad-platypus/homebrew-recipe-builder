@@ -1,0 +1,19 @@
+.rowInput {
+  width: 7.3rem;
+  min-height: unset;
+}
+.form {
+  width: 450px;
+}
+.button {
+  margin-top: 1.45rem;
+  width: 85px;
+}
+@media only screen and (max-width: 770px) {
+  .rowInput {
+    width: 6rem;
+  }
+  .form {
+    width: 90%;
+  }
+}

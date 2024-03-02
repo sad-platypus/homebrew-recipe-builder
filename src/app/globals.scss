@@ -1,0 +1,17 @@
+@use '../scss/themes' as *;
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  color: var(--color);
+}
+* {
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 770px) {
+  body {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,49 @@
+@import '/src/scss/colors';
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: fixed;
+  width: 200px;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+}
+.link {
+  height: fit-content;
+  width: fit-content;
+  border-radius: 100px;
+}
+.image {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+.desktopWrapper {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+@media only screen and (min-width: 770px) {
+  .mobileWrapper {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .desktopWrapper {
+    display: none;
+  }
+  .sidebar {
+    background-color: transparent;
+    width: fit-content;
+    position: static;
+    flex-direction: row;
+    height: fit-content;
+  }
+  .image {
+    width: 150px;
+    height: 150px;
+  }
+}

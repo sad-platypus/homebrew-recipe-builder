@@ -1,0 +1,32 @@
+@import '/src/scss/colors';
+
+.wrapper {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+
+}
+.background {
+  background-image: url('../../../public/delicious-american-beer-arrangement.jpg');
+  background-repeat: no-repeat;
+  background-size: auto;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: -1000;
+}
+.content {
+  padding: 1.5rem;
+  margin-left: 200px;
+  width: calc(100vw - 200px);
+}
+@media only screen and (max-width: 770px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .content {
+    padding: 0.2rem;
+    margin-left: 0px;
+    width: 100vw;
+  }
+}
