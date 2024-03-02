@@ -2,7 +2,7 @@
 
 import { useRouter, usePathname } from '@/navigation';
 import { useLocale } from 'next-intl';
-import styles from './language-switcher.module.css';
+import styles from './language-switcher.module.scss';
 
 export const LangueageSwitcher = () => {
   const router = useRouter();
@@ -16,6 +16,7 @@ export const LangueageSwitcher = () => {
   return (
     <div className={styles.wrapper}>
       <select
+        name="languageSwitcher"
         value={locale}
         onChange={(e) => handleChange(e)}
       >

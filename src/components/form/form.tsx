@@ -5,18 +5,20 @@ import {
   FieldValues,
   FormProvider,
   SubmitHandler,
+  UseFormReturn,
   useForm,
 } from 'react-hook-form';
 import { Schema } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import styles from './form.module.scss';
 
-
 type FormProps = {
   className?: string;
-  onSubmit?: SubmitHandler<FieldValues>;
+  onSubmit: SubmitHandler<FieldValues>;
   schema: Schema;
   id: string;
+  parentMethods?: UseFormReturn<FieldValues, any, undefined>;
+  defaultValues?: FieldValues
 };
 
 export const Form = ({
@@ -25,9 +27,9 @@ export const Form = ({
   schema,
   id,
   onSubmit,
+  defaultValues
 }: PropsWithChildren<FormProps>) => {
-
-  const methods = useForm({ resolver: zodResolver(schema) });
+ const methods = useForm({resolver: zodResolver(schema), defaultValues: defaultValues })
 
   const submitHandler: SubmitHandler<FieldValues> = (data) => {
     if (onSubmit) {

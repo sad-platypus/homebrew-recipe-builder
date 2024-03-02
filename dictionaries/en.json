@@ -1,30 +1,88 @@
 {
   "Metadata": { "title": "Homebrew Recipe Builder" },
   "sidebar": {
-    "image": "Logo of Platypus' Hoberew picturing mug and bottle of beer, serves as navigation link to homepage"
+    "image": "Logo of Platypus' Hoberew picturing mug and bottle of beer, serves as navigation link to homepage",
+    "link-list": {
+      "my-recipes": "My recipes",
+      "public-recipes": "All recipes",
+      "recipe-builder": "Build recipe",
+      "calculators": "Calculators",
+      "contact": "Contact"
+    },
+    "login": {
+      "button": "SIGN IN"
+    }
   },
-  "link-list": {
-    "my-recipes": "My recipes",
-    "public-recipes": "All recipes",
-    "recipe-builder": "Build recipe",
-    "calculators": "Calculators",
-    "contact": "Contact"
-  },
-  "login": {
-    "button": "SIGN IN"
-  },
+
   "calculators": {
-    "title": "Calculators"
-  },
-  "carbonation": {
-    "title": "Carbonation levels",
-    "volume": "Beer volume [liters]",
-    "desired": "Desired carbonation [CO\u2082 vol.]",
-    "temperature": "Beer temperature [\u00B0C]",
-    "glucoseMH": "Glucose (monohydrate)",
-    "glucose": "Glucose (anhydrous)",
-    "saccharose": "Saccharose (sucrose)",
-    "DME": "Dry malt extract",
-    "sugar": "Refermentation material used"
+    "title": "Calculators",
+    "errors": {
+      "provide-number": "Please provide numerical value",
+      "negative-error": "Please provide positive value", 
+      "provide-number-array": "Please provide numerical value for all fields",
+      "negative-error-array": "Please provide positive value for all fields",
+      "less-than-5": "Value must be >=5",
+      "higher-fg": "Can't be higher than original extract"
+    },
+    "carbonation": {
+      "title": "Carbonation Levels",
+      "volume": "Beer Volume [liters]",
+      "desired": "Desired Carbonation [CO\u2082 vol.]",
+      "temperature": "Beer Temperature [\u00B0C]",
+      "glucoseMH": "Glucose (monohydrate)",
+      "glucose": "Glucose (anhydrous)",
+      "saccharose": "Saccharose",
+      "DME": "Dry malt extract",
+      "sugar": "Refermentation material used",
+      "result": "Amount of sugar required [g]",
+      "submit": "Calculate",
+      "description-p1": "The calculator assumes that the beer has been properly fermented, and there are no residual fermentable sugars left in it.",
+      "description-p2": "For temperature, please provide the highest value achieved by the beer.",
+      "description-p3": "Beer volume limited to above 5 liters because at low volumes, the formula for estimating residual CO\u2082 based on temperature does not work correctly. I assume that nobody will brew smaller batches anyway.",
+      "description-p4": "If you are unsure whether your glucose is anhydrous or a monohydrate, it is likely a monohydrate.",
+      "description-p5": "The calculator assumes no additional pressure during fermentation, so if you ferment under higher pressure result will be most likely too high. It does not account for CO\u2082 loss to the headspace in standard fermenter and during packaging, which may result in a slightly underestimated result.",
+      "description-p6": "If your result is negative, hypothetically, the beer's carbonation after fermentation is already higher than what you intend to achieve.",
+      "description-p7": "Typical beer carbonation usually falls within the range of 2-3 volumes of CO\u2082."
+    },
+    "abv": {
+      "title": "Alcohol By Volume",
+      "OG": "Original Extract [\u00B0Plato]",
+      "FG": "Final Extract [\u00B0Plato]",
+      "result": "ABV",
+      "attenuation": "Attenuation [%]",
+      "submit": "Calculate",
+      "description-p1": "The result is an approximation and may vary slightly from results provided by other calculators, depending on the equation they use.",
+      "description-p2": "The initial extract should be measured after the wort has cooled, before adding yeast. The final extract should be measured before adding priming sugar for refermentation.",
+      "description-p3": "Any non-fermentable adjuncts such as lactose will distort the extract reading, so if they are added between measurements, the calculation result will be significantly distorted.",
+      "description-p4": "If you're using refractometer, remember you need to calculate correction for measurement of final extract!"
+    },
+    "refractometer": {
+      "title": "Refractometer Correction",
+      "brix-initial": "Initial Reading [\u00B0Brix]",
+      "brix-final": "Final Reading [\u00B0Brix]",
+      "correction-factor": "Correction Factor",
+      "result-initial": "Corrected Initial Extract [\u00B0Plato]",
+      "result-final": "Corrected Final Extract [\u00B0Plato]",
+      "submit": "Calculate",
+      "description-p1": "The presence of alcohol in the sample disrupts the refractive index, which is the basis for reading sugar concentration using a refractometer. It is necessary to make corrections for the sample after fermentation. The equation used in the calculator is based on empirical measurements made by a beer blogger (SeanTerrill).",
+      "description-p2": "Temperature affects the refractometer reading, so the wort sample should be cooled before measurement.",
+      "description-p3": "The correction factor is different for each device and should be determined independently: the result obtained from the refractometer reading (for unfermented wort) should be divided by the actual extract content (e.g., measured by a hydrometer) several times over the course of different batches and then averaged. Some calculators assume a default factor of 1.04, but there are no logical grounds for this until it is determined independently. It is probably better to assume a value of 1.00, as the device's factor could just as easily be below 1.",
+      "description-p4": "In the context of homebrewing, Brix and Plato units are essentially identical. For differentiation and clarity, \u00B0Brix is arbitrary here and refers to the direct reading on the refractometer, not the actual value (not taking correction factor into account)."
+    },
+    "ibu": {
+      "title": "Bitterness Level [IBU]",
+      "extract": "Extract [\u00B0Plato]",
+      "volume": "Expected Volume [L]",
+      "alphaAcids": "Alpha Acids [%]",
+      "weight": "Weight [g]",
+      "time": "Time [min]",
+      "remove": "Remove",
+      "append": "Add Hops",
+      "submit": "Calculate",
+      "result": "Bitterness Level [IBU]",
+      "description-p1": "The calculator utilizes Tinseth's method. The constants in the equation have been determined empirically, so they may not perfectly reflect the situation in your brewery. Therefore, the result is mostly rather indicative.",
+      "description-p2": "Other factors besides the concentration of iso-alpha acids (IBU) also influence the bitterness in beer, such as: dry hopping, presence of roasted malts, additives.",
+      "description-p3": "You should specify the volume you anticipate at the end of brewing (it is assumed that standard wort evaporation is ~10% per hour, but it depends on various factors, e.g., surface area of the liquid sheet or intensity of boiling)."
+    }
   }
 }

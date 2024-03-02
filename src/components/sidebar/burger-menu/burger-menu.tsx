@@ -1,8 +1,10 @@
+'use client';
+
 import { useEffect, useRef, useState } from 'react';
-import { LinkList } from '../link-list/link-list';
 import styles from './burger-menu.module.scss';
-import { LangueageSwitcher } from '@/components/language-switcher/language-switcher';
-import { LoginButton } from '../login-button/login-button';
+import { LangueageSwitcher } from '../language-switcher';
+import { LinkList } from '../link-list';
+import { LoginButton } from '../login-button';
 
 export const BurgerMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

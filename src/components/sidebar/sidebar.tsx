@@ -3,11 +3,12 @@
 import styles from './sidebar.module.scss';
 import Image from 'next/image';
 import { Link } from '@/navigation';
-import {LinkList} from './link-list/link-list';
-import {LangueageSwitcher} from '../language-switcher/language-switcher';
-import { BurgerMenu } from './burger-menu/burger-menu';
-import { LoginButton } from './login-button/login-button';
 import { useTranslations } from 'next-intl';
+import { BurgerMenu } from './burger-menu';
+import { LangueageSwitcher } from './language-switcher';
+import { LinkList } from './link-list';
+import { LoginButton } from './login-button';
+
 
 export const Sidebar = () => {
   const t = useTranslations('sidebar');

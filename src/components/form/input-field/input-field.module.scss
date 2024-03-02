@@ -1,12 +1,22 @@
+@import '/src/variables';
+
 .input {
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 0.2rem;
   background-color: transparent;
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.25);
+  text-align: center;
+  background-color: $light-background;
+  border: none;
+  margin: 0 1px;
+  border: 1px solid rgb(0, 0, 0);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $dark-background;
+    border: 1px solid rgb(255, 255, 255);
   }
+
   &.error {
-    background-color: rgba(253, 0, 0, 0.301);
+    border: 2px solid rgb(255, 0, 0);
   }
 }
 

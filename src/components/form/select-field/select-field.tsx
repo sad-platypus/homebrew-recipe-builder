@@ -33,6 +33,7 @@ export const SelectField = <T extends object>({
   const selectOptions = options.map((option) => {
     return (
       <option
+        key={`${name}_${option.text}`}
         selected={option.isSelected}
         disabled={option.isDisabled}
         value={option.value}
@@ -44,13 +45,12 @@ export const SelectField = <T extends object>({
 
   return (
     <FieldWrapper
+    inputId={name}
       label={label}
-      error={fieldError}
+      errorMessage={fieldError?.message}
     >
       <select
-        className={
-          errors[name] ? `${styles.select} ${styles.error}` : styles.select
-        }
+        className={styles.select}
         {...register(name, { valueAsNumber: isValueANumber })}
       >
         {selectOptions}

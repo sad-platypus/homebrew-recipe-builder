@@ -1,12 +1,20 @@
+@import '/src/variables';
+
 .sidebar {
   display: flex;
   flex-direction: column;
   height: 100vh;
   position: fixed;
-  width: 200px
+  width: 200px;
+  border-radius: 10px;
+  background-color: $light-card;
+  @media (prefers-color-scheme: dark) {
+    background-color: $dark-card;
+  }
 }
 .link {
   height: fit-content;
+  width: fit-content;
   border-radius: 100px;
 }
 .image {
@@ -31,6 +39,8 @@
     display: none;
   }
   .sidebar {
+    background-color: transparent;
+    width: fit-content;
     position: static;
     flex-direction: row;
     height: fit-content;

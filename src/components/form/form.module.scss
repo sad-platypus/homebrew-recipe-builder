@@ -1,5 +1,13 @@
 .form {
   display: flex;
+  flex-shrink: 0;
   flex-direction: column;
   border-radius: 10px;
+  margin: 0.5rem;
+  width: 270px;
+}
+@media only screen and (max-width: 770px) {
+  .form {
+    width: auto;
+  }
 }
