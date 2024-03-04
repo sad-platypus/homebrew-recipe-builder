@@ -4,7 +4,9 @@ import { useEffect, useRef, useState } from 'react';
 import styles from './burger-menu.module.scss';
 import { LangueageSwitcher } from '../language-switcher';
 import { LinkList } from '../link-list';
-import { LoginButton } from '../login-button';
+import { ThemeSwitcher } from '@/components/sidebar/theme-switcher/theme-switcher';
+import { AuthButton } from '@/features/auth';
+import { motion } from 'framer-motion';
 
 export const BurgerMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -50,15 +52,20 @@ export const BurgerMenu = () => {
         <span className={styles.bar}></span>
       </label>
       {isMenuOpen && (
-        <div
+        <motion.div
+          initial={{ height: 0, opacity: 0, width: 0 }}
+          animate={{ height: 'auto', opacity: 1, width: 'fit-content' }}
+          transition={{ duration: 0.4 }}
+          style={{ overflow: 'hidden' }}
           ref={menuRef}
           className={styles.menuOpen}
         >
           <button onClick={() => setIsMenuOpen(false)}>X</button>
           <LinkList onLinkClick={handleMenuClick} />
+          <AuthButton />
+          <ThemeSwitcher />
           <LangueageSwitcher />
-          <LoginButton onClick={() => setIsMenuOpen(false)} />
-        </div>
+        </motion.div>
       )}
     </div>
   );

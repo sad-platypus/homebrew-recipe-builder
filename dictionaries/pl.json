@@ -12,7 +12,8 @@
     "darkmode": "Tryb ciemny",
     "lightmode": "Tryb jasny",
     "login": {
-      "button": "ZALOGUJ"
+      "sign-in": "Zaloguj się z Google",
+      "sign-out": "Wyloguj"
     }
   },
 

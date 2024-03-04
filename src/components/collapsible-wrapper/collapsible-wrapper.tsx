@@ -2,7 +2,7 @@ import { PropsWithChildren, useState } from 'react';
 import styles from './collapsible-wrapper.module.scss';
 import { H2 } from '../elements';
 import { AnimatePresence, motion } from 'framer-motion';
-import { basicVariants } from '@/constants/animation-variants';
+import { headerVariants } from '@/utils/constants/animation-variants';
 
 type CollapsibleWrapperProps = {
   title: string;
@@ -23,7 +23,7 @@ export const CollapsibleWrapper = ({
 
   return (
     <motion.div
-      variants={basicVariants}
+      variants={headerVariants}
       initial="initial"
       animate="animate"
       className={styles.wrapper}

@@ -1,0 +1,30 @@
+.googleButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5rem 0 1rem 0;
+  width: 200px;
+  height: 40px;
+  padding: 10px 12px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 0px 1px #8e918f inset;
+  background-color: #131314;
+  color: #e3e3e3;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(120%);
+  }
+
+  @media only screen and (max-width: 770px) {
+    width: 180px;
+    margin: 0.5rem 0;
+  }
+}
+.logo {
+  margin-right: 10px;
+}
+
+.logout {
+  justify-content: center;
+}

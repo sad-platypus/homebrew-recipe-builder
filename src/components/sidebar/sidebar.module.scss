@@ -7,7 +7,7 @@
   position: fixed;
   width: 200px;
   border-radius: 10px;
-  background-color: var(--primary-color);
+  background-color: var(--primary);
 }
 .link {
   height: fit-content;
@@ -25,6 +25,10 @@
   flex-direction: column;
   height: 100%;
 }
+.switchers {
+  background-color: var(--secondary);
+  border-radius: 10px;
+}
 @media only screen and (min-width: 770px) {
   .mobileWrapper {
     display: none;
@@ -32,15 +36,16 @@
 }
 
 @media only screen and (max-width: 770px) {
-  .desktopWrapper {
-    display: none;
-  }
   .sidebar {
     background-color: transparent;
     width: fit-content;
     position: static;
     flex-direction: row;
     height: fit-content;
+  }
+  .desktopWrapper {
+    display: none;
+    position: fixed;
   }
   .image {
     width: 150px;

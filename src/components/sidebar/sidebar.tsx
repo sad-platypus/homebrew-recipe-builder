@@ -7,13 +7,19 @@ import { useTranslations } from 'next-intl';
 import { BurgerMenu } from './burger-menu';
 import { LangueageSwitcher } from './language-switcher';
 import { LinkList } from './link-list';
-import { LoginButton } from './login-button';
-import { ThemeSwitcher } from '../theme-switcher/theme-switcher';
+import { ThemeSwitcher } from './theme-switcher/theme-switcher';
+import { motion } from 'framer-motion';
+import { AuthButton } from '@/features/auth';
 
 export const Sidebar = () => {
   const t = useTranslations('sidebar');
   return (
-    <div className={styles.sidebar}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className={styles.sidebar}
+      transition={{ duration: 0.4 }}
+    >
       <Link
         className={styles.link}
         href="/"
@@ -28,16 +34,16 @@ export const Sidebar = () => {
         />
       </Link>
       <div className={styles.desktopWrapper}>
-        <LinkList />
-        <div>
+        <LinkList  />
+        <div className={styles.switchers}>
+          <AuthButton />
           <ThemeSwitcher />
           <LangueageSwitcher />
-          <LoginButton />
         </div>
       </div>
       <div className={styles.mobileWrapper}>
         <BurgerMenu />
       </div>
-    </div>
+    </motion.div>
   );
 };

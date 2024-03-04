@@ -26,14 +26,14 @@
   z-index: 1000;
   position: fixed;
   top: 5px;
-  left: 5px;
-  background-color: var(--primary-color);
+  right: 5px;
+  background-color: var(--primary);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: 0px 0px 10px 2px var(--color);
-  width: 97vw;
+  width: fit-content;
 
   button {
     height: 2rem;

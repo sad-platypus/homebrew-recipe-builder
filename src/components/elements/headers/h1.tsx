@@ -3,7 +3,7 @@
 import { PropsWithChildren } from 'react';
 import styles from './headers.module.scss';
 import { motion } from 'framer-motion';
-import { basicVariants } from '@/constants/animation-variants';
+import { headerVariants } from '@/utils/constants/animation-variants';
 
 type H1Props = {
   id?: string;
@@ -20,7 +20,7 @@ export const H1 = ({
 }: PropsWithChildren<H1Props>) => {
   return (
     <motion.div
-      variants={basicVariants}
+      variants={headerVariants}
       initial="initial"
       animate="animate"
     >

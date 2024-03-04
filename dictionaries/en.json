@@ -12,7 +12,8 @@
     "darkmode": "Darkmode",
     "lightmode": "Lightmode",
     "login": {
-      "button": "SIGN IN"
+      "sign-in": "Sign in with Google",
+      "sign-out": "Sign out"
     }
   },
 
