@@ -6,6 +6,9 @@ html[data-theme='dark'] {
   --color: #{$light};
   --header: #{$dark-header};
   --accent: #{$accent-color};
+  --google-font: #e3e3e3;
+  --google-background: #131314;
+  --google-border: #8e918f;
 }
 
 html[data-theme='light'] {
@@ -14,6 +17,9 @@ html[data-theme='light'] {
   --color: #{$dark};
   --header: #{$light-header};
   --accent: #{$accent-color};
+  --google-font: #1f1f1f;
+  --google-background: #ffffff;
+  --google-border: #747775;
 }
 
 html {

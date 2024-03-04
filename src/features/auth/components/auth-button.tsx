@@ -3,16 +3,16 @@
 import { createClient } from '@/utils/supabase/client';
 import styles from './auth-button.module.scss';
 import { useTranslations } from 'next-intl';
-import { useUser } from '../hooks';
 import Image from 'next/image';
 import { Roboto } from 'next/font/google';
+import { useSession } from '../hooks';
 
 const roboto = Roboto({ subsets: ['latin'], weight: '500' });
 
 export const AuthButton = () => {
   const t = useTranslations('sidebar.login');
   const supabase = createClient();
-  const user = useUser();
+  const session = useSession();
 
   const loginWithGoogle = async () => {
     await supabase.auth.signInWithOAuth({
@@ -27,7 +27,7 @@ export const AuthButton = () => {
     await supabase.auth.signOut();
   };
 
-  return user ? (
+  return session ? (
     <div
       onClick={logout}
       className={`${roboto.className} ${styles.googleButton} ${styles.logout}`}
