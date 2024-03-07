@@ -1,16 +1,15 @@
-import {  ThemeContext } from '@/utils/contexts/theme-context';
-import { useContext} from 'react';
 import styles from './theme-switcher.module.scss';
 import { motion } from 'framer-motion';
 import { P } from '../../elements';
 import { useTranslations } from 'next-intl';
+import { useTheme } from 'next-themes';
 
 export const ThemeSwitcher = () => {
   const t = useTranslations('sidebar');
-  const { theme, toggleTheme } = useContext(ThemeContext);
-  const darkTheme = theme === 'dark';
+  const { resolvedTheme, setTheme } = useTheme();
+  const darkTheme = resolvedTheme === 'dark';
 
-
+  const toggleTheme = () => (darkTheme ? setTheme('light') : setTheme('dark'));
   return (
     <div className={styles.wrapper}>
       <P className={styles.text}>
