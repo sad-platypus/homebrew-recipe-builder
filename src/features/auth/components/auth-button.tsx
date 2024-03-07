@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { Roboto } from 'next/font/google';
 import { useSession } from '../hooks';
+import { usePathname } from 'next/navigation';
 
 const roboto = Roboto({ subsets: ['latin'], weight: '500' });
 
@@ -13,12 +14,13 @@ export const AuthButton = () => {
   const t = useTranslations('sidebar.login');
   const supabase = createClient();
   const session = useSession();
+  const pathname = usePathname();
 
   const loginWithGoogle = async () => {
     await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: `http://localhost:3000/auth/callback`,
+        redirectTo: `http://localhost:3000/auth/callback?pathname=${pathname}`,
       },
     });
   };

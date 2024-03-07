@@ -31,10 +31,15 @@ export default function RootLayout({
 }>) {
   unstable_setRequestLocale(locale);
 
+  const defaultTheme = 'dark';
+  
   return (
-    <html lang={locale}>
+    <html
+      data-theme={defaultTheme}
+      lang={locale}
+    >
       <body className={fontLato.className}>
-        <ThemeProvider>
+        <ThemeProvider defaultTheme={defaultTheme}>
           <BaseLayout>{children}</BaseLayout>
         </ThemeProvider>
       </body>

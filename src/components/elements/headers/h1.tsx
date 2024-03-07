@@ -19,19 +19,13 @@ export const H1 = ({
   ...otherProps
 }: PropsWithChildren<H1Props>) => {
   return (
-    <motion.div
-      variants={headerVariants}
-      initial="initial"
-      animate="animate"
+    <h1
+      className={`${styles.h1} ${className || ''}`}
+      id={id}
+      aria-label={ariaLabel}
+      {...otherProps}
     >
-      <h1
-        className={`${styles.h1} ${className || ''}`}
-        id={id}
-        aria-label={ariaLabel}
-        {...otherProps}
-      >
-        {children}
-      </h1>
-    </motion.div>
+      {children}
+    </h1>
   );
 };

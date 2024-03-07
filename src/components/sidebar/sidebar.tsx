@@ -14,12 +14,13 @@ import { AuthButton } from '@/features/auth';
 export const Sidebar = () => {
   const t = useTranslations('sidebar');
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      className={styles.sidebar}
-      transition={{ duration: 0.4 }}
-    >
+    // <motion.div
+    //   initial={{ opacity: 0 }}
+    //   animate={{ opacity: 1 }}
+    //   className={styles.sidebar}
+    //   transition={{ duration: 0.4 }}
+    // >
+    <div className={styles.sidebar}>
       <Link
         className={styles.link}
         href="/"
@@ -34,7 +35,7 @@ export const Sidebar = () => {
         />
       </Link>
       <div className={styles.desktopWrapper}>
-        <LinkList  />
+        <LinkList />
         <div className={styles.switchers}>
           <AuthButton />
           <ThemeSwitcher />
@@ -44,6 +45,7 @@ export const Sidebar = () => {
       <div className={styles.mobileWrapper}>
         <BurgerMenu />
       </div>
-    </motion.div>
+      {/* // </motion.div> */}
+    </div>
   );
 };

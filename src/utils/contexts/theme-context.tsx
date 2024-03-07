@@ -1,32 +1,44 @@
 'use client';
 
-import React, { createContext, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 
 interface ContextProps {
-  darkTheme: boolean;
+  theme: 'dark' | 'light';
   toggleTheme: () => void;
 }
 
 export const ThemeContext = createContext<ContextProps>({
-  darkTheme: true,
+  theme: 'dark',
   toggleTheme: () => {},
 });
 
 interface Props {
   children?: React.ReactNode;
+  defaultTheme: 'dark' | 'light';
 }
 
-export const ThemeProvider: React.FC<Props> = ({ children }) => {
-  const [darkTheme, setDarkTheme] = useState(true);
+export const ThemeProvider = ({ children, defaultTheme }: Props) => {
+  const [theme, setTheme] = useState(defaultTheme);
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem('data-theme') ;
+    if (storedTheme) {
+      setTheme(storedTheme as 'dark' | 'light');
+      document.documentElement.setAttribute('data-theme', storedTheme);
+    }
+  }, []);
 
   const toggleThemeHandler = () => {
-    setDarkTheme((prevState) => !prevState);
+    const themeToSet = theme === 'dark' ? 'light' : 'dark';
+    setTheme(themeToSet);
+    document.documentElement.setAttribute('data-theme', themeToSet);
+    localStorage.setItem('data-theme', `${themeToSet}`);
   };
 
   return (
     <ThemeContext.Provider
       value={{
-        darkTheme: darkTheme,
+        theme,
         toggleTheme: toggleThemeHandler,
       }}
     >

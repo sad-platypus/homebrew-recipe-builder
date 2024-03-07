@@ -22,12 +22,7 @@ export const CollapsibleWrapper = ({
   };
 
   return (
-    <motion.div
-      variants={headerVariants}
-      initial="initial"
-      animate="animate"
-      className={styles.wrapper}
-    >
+    <div className={styles.wrapper}>
       <div
         onClick={toggleCollapse}
         className={`${styles.header} ${headerStyle || ''}`}
@@ -54,6 +49,6 @@ export const CollapsibleWrapper = ({
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.div>
+    </div>
   );
 };

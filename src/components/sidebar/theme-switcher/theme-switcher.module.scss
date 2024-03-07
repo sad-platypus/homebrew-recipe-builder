@@ -22,11 +22,10 @@
   background-color: var(--accent);
   cursor: pointer;
   border-radius: 20px;
-  &[data-is-on='true'] {
-    justify-content: flex-end;
-  }
 }
-
+.isDarkmode {
+  justify-content: flex-end;
+}
 .handle {
   width: 22px;
   height: 22px;

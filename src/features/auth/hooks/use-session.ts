@@ -8,11 +8,11 @@ export const useSession = () => {
   const supabase = createClient();
   const [session, setSession] = useState<Session | null>();
   useEffect(() => {
-    const getUser = async () => {
+    const getSession = async () => {
       const { data } = await supabase.auth.getSession();
       setSession(data.session);
     };
-    getUser();
+    getSession();
   }, [session]);
   return session;
 };
