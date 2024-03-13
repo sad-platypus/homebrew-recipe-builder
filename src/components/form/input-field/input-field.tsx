@@ -6,7 +6,7 @@ import { InputHTMLAttributes } from 'react';
 type InputFieldProps = {
   label: string;
   name: string;
-  type?: 'text' | 'number';
+  type?: 'text' | 'number' | 'password';
   className?: string;
 } & InputHTMLAttributes<HTMLInputElement>;
 
@@ -31,13 +31,13 @@ export const InputField = ({
 
   return (
     <FieldWrapper
-    inputId={name}
+      inputId={name}
       className={className}
       label={label}
       errorMessage={fieldError?.message}
     >
       <input
-      id={name}
+        id={name}
         className={styles.input}
         type={type}
         {...register(name, { valueAsNumber: isValueANumber })}

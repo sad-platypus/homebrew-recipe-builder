@@ -3,7 +3,7 @@
   "sidebar": {
     "image": "Logo of Platypus' Hoberew picturing mug and bottle of beer, serves as navigation link to homepage",
     "link-list": {
-      "my-recipes": "My recipes",
+      "my-profile": "My profile",
       "public-recipes": "All recipes",
       "recipe-builder": "Build recipe",
       "calculators": "Calculators",
@@ -12,7 +12,7 @@
     "darkmode": "Darkmode",
     "lightmode": "Lightmode",
     "login": {
-      "sign-in": "Sign in with Google",
+      "sign-in": "Sign in",
       "sign-out": "Sign out"
     }
   },
@@ -88,5 +88,31 @@
       "description-p3": "You should specify the volume you anticipate at the end of brewing (it is assumed that standard wort evaporation is ~10% per hour, but it depends on various factors, e.g., surface area of the liquid sheet or intensity of boiling)."
     }
   },
-  "theme": {}
+
+  "auth": {
+    "sign-up-title": "Register via email",
+    "sign-in-title": "Sign in via email or Google account",
+    "sign-up": {
+      "email": "Email",
+      "password": "Password",
+      "confirm-password": "Confirm Password",
+      "name": "Username",
+      "submit": "Register"
+    },
+    "schemas": {
+      "provide-email": "Please provide an email",
+      "incorrect-email": "Please provide a valid email",
+      "too-short": "Password must be at least 8 characters long",
+      "lower-case": "Password must contain at least 1 lowercase letter",
+      "upper-case": "Password must contain at least 1 uppercase letter",
+      "number": "Password must contain at least 1 digit",
+      "match-passwords": "Passwords in both fields must match",
+      "name": "Must contain letters, numbers and spaces only",
+      "wrong-length": "Name should be 4-20 characters long"
+    },
+    "sign-up-success": {
+      "title": "Registration Successful",
+      "message": "Thank you for creating an account on our platform. Before logging in for the first time, please activate your account by clicking the link sent to the email address provided during registration."
+    }
+  }
 }

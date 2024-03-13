@@ -1,5 +1,5 @@
 'use client';
-import { CollapsibleWrapper } from '@/components/collapsible-wrapper';
+import { CollapsibleCard } from '@/components/wrappers';
 import { Form, InputField } from '@/components/form';
 import { useTranslations } from 'next-intl';
 import { useABVSchema } from '../../hooks/use-abv-schema';
@@ -8,7 +8,6 @@ import { Button, P } from '@/components/elements';
 import { FieldValues } from 'react-hook-form';
 import { calculateABV } from '../../utils';
 import { DescriptionWrapper } from '../description-wrapper';
-
 
 export const AlcoholByVolume = () => {
   const t = useTranslations('calculators.abv');
@@ -22,7 +21,7 @@ export const AlcoholByVolume = () => {
   };
 
   return (
-    <CollapsibleWrapper title={t('title')}>
+    <CollapsibleCard title={t('title')}>
       <Form
         id="abvForm"
         schema={abvSchema}
@@ -60,6 +59,6 @@ export const AlcoholByVolume = () => {
         <P>{t('description-p3')}</P>
         <P>{t('description-p4')}</P>
       </DescriptionWrapper>
-    </CollapsibleWrapper>
+    </CollapsibleCard>
   );
 };

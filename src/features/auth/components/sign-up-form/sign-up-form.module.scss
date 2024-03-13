@@ -1,0 +1,6 @@
+.form {
+  width: 400px;
+  @media only screen and (max-width: 770px) {
+    width: auto;
+  }
+}

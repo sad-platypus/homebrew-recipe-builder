@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import styles from './burger-menu.module.scss';
 import { LangueageSwitcher } from '../language-switcher';
 import { LinkList } from '../link-list';
-import { ThemeSwitcher } from '@/components/sidebar/theme-switcher/theme-switcher';
+import { ThemeSwitcher } from '@/components/sidebar/theme-switcher/';
 import { AuthButton } from '@/features/auth';
 import { motion } from 'framer-motion';
 

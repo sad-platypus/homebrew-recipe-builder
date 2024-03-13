@@ -1,6 +1,6 @@
 'use client';
 
-import { CollapsibleWrapper } from '@/components/collapsible-wrapper';
+import { CollapsibleCard } from '@/components/wrappers';
 import { InputField, Form, SelectField } from '@/components/form';
 import { useTranslations } from 'next-intl';
 import { FieldValues } from 'react-hook-form';
@@ -26,7 +26,7 @@ export const Carbonation = () => {
   };
 
   return (
-    <CollapsibleWrapper title={t('title')}>
+    <CollapsibleCard title={t('title')}>
       <Form
         onSubmit={handleSubmit}
         id="carbonationForm"
@@ -74,6 +74,6 @@ export const Carbonation = () => {
         <P>{t('description-p6')}</P>
         <P>{t('description-p7')}</P>
       </DescriptionWrapper>
-    </CollapsibleWrapper>
+    </CollapsibleCard>
   );
 };

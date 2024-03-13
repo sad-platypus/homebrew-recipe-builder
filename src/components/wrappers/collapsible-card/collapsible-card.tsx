@@ -1,15 +1,16 @@
+'use client';
+
 import { PropsWithChildren, useState } from 'react';
-import styles from './collapsible-wrapper.module.scss';
-import { H2 } from '../elements';
+import styles from './collapsible-card.module.scss';
+import { H2 } from '../../elements';
 import { AnimatePresence, motion } from 'framer-motion';
-import { headerVariants } from '@/utils/constants/animation-variants';
 
 type CollapsibleWrapperProps = {
   title: string;
   headerStyle?: string;
   contentStyle?: string;
 };
-export const CollapsibleWrapper = ({
+export const CollapsibleCard = ({
   children,
   title,
   headerStyle,

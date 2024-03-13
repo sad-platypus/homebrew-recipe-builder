@@ -3,7 +3,7 @@
   "sidebar": {
     "image": "Logo Platypus' Hoberew przedstawiające kufel i butelkę piwa, służące jako link nawigacyjny na stronę główną.",
     "link-list": {
-      "my-recipes": "Moje receptury",
+      "my-profile": "Mój profil",
       "public-recipes": "Wszystkie receptury",
       "recipe-builder": "Stwórz recepturę",
       "calculators": "Kalkulatory",
@@ -12,7 +12,7 @@
     "darkmode": "Tryb ciemny",
     "lightmode": "Tryb jasny",
     "login": {
-      "sign-in": "Zaloguj się z Google",
+      "sign-in": "Zaloguj",
       "sign-out": "Wyloguj"
     }
   },
@@ -88,5 +88,30 @@
       "description-p3": "Należy podać objętość, jaką przewidujemy na koniec warzenia (zakłada się, że standardowe odparowanie brzeczki to ~10% na godzinę, ale zależy ono od różnych czynników, np. powierzchnia tafli cieczy czy intensywność gotowania)."
     }
   },
-  "theme": {}
+  "auth": {
+    "sign-up-title": "Zarejestruj przez email",
+    "sign-in-title": "Zaloguj przez email lub konto Google",
+    "sign-up": {
+      "email": "Email",
+      "password": "Hasło",
+      "confirm-password": "Potwierdź hasło",
+      "name": "Nazwa użytkownika",
+      "submit": "Zarejestruj"
+    },
+    "schemas": {
+      "provide-email": "Należy podać email",
+      "incorrect-email": "Należy podać podać prawidłowy email",
+      "too-short": "Hasło musi zaiwerać co najmniej 8 znaków",
+      "lower-case": "Hasło musi zawierać przynajmniej 1 małą literę",
+      "upper-case": "Hasło musi zawierać przynajmniej 1 wielką literę",
+      "number": "Hasło musi zawierać przynajmniej 1 cyfrę",
+      "match-passwords": "Hasła w obu polach muszą być identyczne",
+      "name": "Może zawierać jedynie litery, cyfry oraz spacje",
+      "wrong-length": "Nazwa powinna zawierać 4-20 znaków"
+    },
+    "sign-up-success": {
+      "title": "Rejestracja przebiegła pomyślnie",
+      "message": "Dziękujemy za założenie konta w serwisie. Przed pierwszym logowaniem należy aktywować konto poprzez link wysłany do Państwa na adres email podany podczas rejestracji."
+    }
+  }
 }

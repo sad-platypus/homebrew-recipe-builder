@@ -7,19 +7,12 @@ import { useTranslations } from 'next-intl';
 import { BurgerMenu } from './burger-menu';
 import { LangueageSwitcher } from './language-switcher';
 import { LinkList } from './link-list';
-import { ThemeSwitcher } from './theme-switcher/theme-switcher';
-import { motion } from 'framer-motion';
+import { ThemeSwitcher } from './theme-switcher';
 import { AuthButton } from '@/features/auth';
 
 export const Sidebar = () => {
   const t = useTranslations('sidebar');
   return (
-    // <motion.div
-    //   initial={{ opacity: 0 }}
-    //   animate={{ opacity: 1 }}
-    //   className={styles.sidebar}
-    //   transition={{ duration: 0.4 }}
-    // >
     <div className={styles.sidebar}>
       <Link
         className={styles.link}
@@ -45,7 +38,6 @@ export const Sidebar = () => {
       <div className={styles.mobileWrapper}>
         <BurgerMenu />
       </div>
-      {/* // </motion.div> */}
     </div>
   );
 };

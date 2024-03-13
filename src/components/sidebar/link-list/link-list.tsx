@@ -15,13 +15,14 @@ export const LinkList = ({ onLinkClick }: LinkListProps) => {
   const pathnameWithoutLocale = matchPathname && matchPathname[1];
 
   const paths = [
-    { url: 'my-recipes', text: t('my-recipes') },
+    { url: 'calculators', text: t('calculators') },
     {
       url: 'public-recipes',
       text: t('public-recipes'),
     },
+    { url: 'my-profile', text: t('my-profile') },
     { url: 'recipe-builder', text: t('recipe-builder') },
-    { url: 'calculators', text: t('calculators') },
+
     { url: 'contact', text: t('contact') },
   ];
 

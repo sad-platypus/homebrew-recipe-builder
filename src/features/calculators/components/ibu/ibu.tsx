@@ -1,6 +1,6 @@
 'use client';
 
-import { CollapsibleWrapper } from '@/components/collapsible-wrapper';
+import { CollapsibleCard } from '@/components/wrappers';
 import { Button, P } from '@/components/elements';
 import { Form, InputField, RowOfInputs } from '@/components/form';
 import { useTranslations } from 'next-intl';
@@ -29,7 +29,7 @@ export const IBU = () => {
   };
 
   return (
-    <CollapsibleWrapper title={t('title')}>
+    <CollapsibleCard title={t('title')}>
       <Form
         defaultValues={defaultValues}
         className={styles.form}
@@ -63,6 +63,6 @@ export const IBU = () => {
         <P>{t('description-p2')}</P>
         <P>{t('description-p3')}</P>
       </DescriptionWrapper>
-    </CollapsibleWrapper>
+    </CollapsibleCard>
   );
 };

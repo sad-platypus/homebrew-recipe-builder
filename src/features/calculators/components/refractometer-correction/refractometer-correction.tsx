@@ -1,6 +1,6 @@
 'use client';
 
-import { CollapsibleWrapper } from '@/components/collapsible-wrapper';
+import { CollapsibleCard } from '@/components/wrappers';
 import { Form, InputField } from '@/components/form';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
@@ -9,7 +9,6 @@ import { FieldValues } from 'react-hook-form';
 import { Button, P } from '@/components/elements';
 import { calculateRefractometer } from '@features/calculators/utils';
 import { DescriptionWrapper } from '../description-wrapper';
-
 
 export const RefractometerCorrection = () => {
   const t = useTranslations('calculators.refractometer');
@@ -24,7 +23,7 @@ export const RefractometerCorrection = () => {
   };
 
   return (
-    <CollapsibleWrapper title={t('title')}>
+    <CollapsibleCard title={t('title')}>
       <Form
         id="refractometerForm"
         schema={refractometerSchema}
@@ -68,6 +67,6 @@ export const RefractometerCorrection = () => {
         <P>{t('description-p3')}</P>
         <P>{t('description-p4')}</P>
       </DescriptionWrapper>
-    </CollapsibleWrapper>
+    </CollapsibleCard>
   );
 };

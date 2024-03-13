@@ -13,7 +13,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import styles from './form.module.scss';
 
 type FormProps = {
-  className?: string;
+  style?: string;
   onSubmit: SubmitHandler<FieldValues>;
   schema: Schema;
   id: string;
@@ -23,7 +23,7 @@ type FormProps = {
 
 export const Form = ({
   children,
-  className,
+  style,
   schema,
   id,
   onSubmit,
@@ -42,7 +42,7 @@ export const Form = ({
       <form
         id={id}
         onSubmit={methods.handleSubmit(submitHandler)}
-        className={`${styles.form} ${className || ''}`}
+        className={`${styles.form} ${style || ''}`}
       >
         {children}
       </form>
