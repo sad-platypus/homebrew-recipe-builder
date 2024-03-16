@@ -1,13 +1,20 @@
 import { Card } from '@/components/wrappers';
-import { GoogleAuthButton } from './google-auth-button';
+import { GoogleOAuthButton } from './google-auth-button';
 import styles from './login.module.scss';
-import { SignUpForm } from './sign-up-form';
-import { NextIntlClientProvider, useMessages, useTranslations } from 'next-intl';
+import { SignUpForm } from './sign-up';
+import {
+  NextIntlClientProvider,
+  useMessages,
+  useTranslations,
+} from 'next-intl';
 import { pick } from 'lodash';
+import { SignInForm } from './sign-in-form';
+import { Button } from '@/components/elements';
+import { Link, redirect } from '@/navigation';
 
 export const Login = () => {
-  const t = useTranslations('auth')
-  const translations = useMessages()
+  const t = useTranslations('auth');
+  const translations = useMessages();
 
   return (
     <div className={styles.wrapper}>
@@ -15,15 +22,18 @@ export const Login = () => {
         <Card
           style={styles.card}
           headerStyle={styles.header}
-          title={t("sign-in-title")}
+          title={t('sign-in-title')}
         >
-          <GoogleAuthButton />
+          <SignInForm />
+          <GoogleOAuthButton />
+
+          <Link href="/login/reset-password">forgot pass?</Link>
         </Card>
 
         <Card
           style={styles.card}
           headerStyle={styles.header}
-          title={t("sign-up-title")}
+          title={t('sign-up-title')}
         >
           <SignUpForm />
         </Card>

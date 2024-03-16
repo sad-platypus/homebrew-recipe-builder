@@ -45,13 +45,14 @@ export const SelectField = <T extends object>({
 
   return (
     <FieldWrapper
-    inputId={name}
+      inputId={name}
       label={label}
       errorMessage={fieldError?.message}
     >
       <select
         className={styles.select}
         {...register(name, { valueAsNumber: isValueANumber })}
+        {...otherProps}
       >
         {selectOptions}
       </select>

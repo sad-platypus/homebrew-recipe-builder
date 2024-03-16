@@ -18,7 +18,7 @@ type FormProps = {
   schema: Schema;
   id: string;
   parentMethods?: UseFormReturn<FieldValues, any, undefined>;
-  defaultValues?: FieldValues
+  defaultValues?: FieldValues;
 };
 
 export const Form = ({
@@ -27,14 +27,15 @@ export const Form = ({
   schema,
   id,
   onSubmit,
-  defaultValues
+  defaultValues,
 }: PropsWithChildren<FormProps>) => {
- const methods = useForm({resolver: zodResolver(schema), defaultValues: defaultValues })
+  const methods = useForm({
+    resolver: zodResolver(schema),
+    defaultValues: defaultValues,
+  });
 
   const submitHandler: SubmitHandler<FieldValues> = (data) => {
-    if (onSubmit) {
-      onSubmit(data);
-    }
+    onSubmit(data);
   };
 
   return (

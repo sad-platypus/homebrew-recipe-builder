@@ -2,15 +2,15 @@
 
 import Image from 'next/image';
 import { useLocale, useTranslations } from 'next-intl';
-import styles from './google-auth-button.module.scss';
-import { createClient } from '@/utils/supabase/client';
+import styles from './google-oauth-button.module.scss';
+import { browserClient } from '@/utils/supabase/client';
 import { Roboto } from 'next/font/google';
 
 const roboto = Roboto({ subsets: ['latin'], weight: '500', display: 'swap' });
 
-export const GoogleAuthButton = () => {
-  //   const t = useTranslations('auth');
-  const supabase = createClient();
+export const GoogleOAuthButton = () => {
+    const t = useTranslations('auth.sign-in');
+  const supabase = browserClient;
   const locale = useLocale();
 
   const loginWithGoogle = async () => {
@@ -33,9 +33,8 @@ export const GoogleAuthButton = () => {
         height={20}
         src="/google-icon.png"
         alt="google icon"
-      />{' '}
-      login with google placeholder
-      {/* {t('google-login')} */}
+      />
+      {t('google-login')}
     </div>
   );
 };

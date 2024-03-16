@@ -92,6 +92,12 @@
   "auth": {
     "sign-up-title": "Register via email",
     "sign-in-title": "Sign in via email or Google account",
+    "sign-in": {
+      "email": "Email",
+      "password": "Password",
+      "submit": "Log in",
+      "google-login": "Log in with Google"
+    },
     "sign-up": {
       "email": "Email",
       "password": "Password",
@@ -108,7 +114,8 @@
       "number": "Password must contain at least 1 digit",
       "match-passwords": "Passwords in both fields must match",
       "name": "Must contain letters, numbers and spaces only",
-      "wrong-length": "Name should be 4-20 characters long"
+      "wrong-length": "Name should be 4-20 characters long",
+      "provide-password": "Provide password"
     },
     "sign-up-success": {
       "title": "Registration Successful",

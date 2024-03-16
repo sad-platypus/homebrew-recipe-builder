@@ -91,6 +91,12 @@
   "auth": {
     "sign-up-title": "Zarejestruj przez email",
     "sign-in-title": "Zaloguj przez email lub konto Google",
+    "sign-in": {
+      "email": "Email",
+      "password": "Hasło",
+      "submit": "Zaloguj",
+      "google-login": "Zaloguj się z Google"
+    },
     "sign-up": {
       "email": "Email",
       "password": "Hasło",
@@ -107,7 +113,8 @@
       "number": "Hasło musi zawierać przynajmniej 1 cyfrę",
       "match-passwords": "Hasła w obu polach muszą być identyczne",
       "name": "Może zawierać jedynie litery, cyfry oraz spacje",
-      "wrong-length": "Nazwa powinna zawierać 4-20 znaków"
+      "wrong-length": "Nazwa powinna zawierać 4-20 znaków",
+      "provide-password": "Podaj hasło"
     },
     "sign-up-success": {
       "title": "Rejestracja przebiegła pomyślnie",

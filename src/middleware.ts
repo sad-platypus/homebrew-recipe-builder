@@ -1,11 +1,11 @@
 import createIntlMiddleware from 'next-intl/middleware';
-import { locales, localePrefix } from '@/navigation';
+import { locales, localePrefix, defaultLocale } from '@/navigation';
 import { CookieOptions, createServerClient } from '@supabase/ssr';
 import { NextRequest } from 'next/server';
 
 const handleI18nRouting = createIntlMiddleware({
   locales: locales,
-  defaultLocale: 'en',
+  defaultLocale: defaultLocale,
   localePrefix: localePrefix,
 });
 
@@ -37,5 +37,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/', '/(pl|en)/:path*'],
+  matcher: ['/((?!api|_next|auth|favicon.ico|.*\\..*).*)'],
 };

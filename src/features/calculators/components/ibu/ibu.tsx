@@ -32,7 +32,7 @@ export const IBU = () => {
     <CollapsibleCard title={t('title')}>
       <Form
         defaultValues={defaultValues}
-        className={styles.form}
+        style={styles.form}
         onSubmit={handleSubmit}
         schema={schema}
         id="ibuForm"
