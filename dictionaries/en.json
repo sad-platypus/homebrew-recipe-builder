@@ -92,6 +92,7 @@
   "auth": {
     "sign-up-title": "Register via email",
     "sign-in-title": "Sign in via email or Google account",
+    "forgot-password": "Forgot your password?",
     "sign-in": {
       "email": "Email",
       "password": "Password",
@@ -120,6 +121,19 @@
     "sign-up-success": {
       "title": "Registration Successful",
       "message": "Thank you for creating an account on our platform. Before logging in for the first time, please activate your account by clicking the link sent to the email address provided during registration."
+    },
+    "reset-password": {
+      "title": "Password reset",
+      "message-initial": "Provide the email address associated with the account to reset the password.",
+      "message-submitted": "The email address provided has been sent a message with further instructions on resetting the password.",
+      "email": "Email",
+      "submit": "Send"
+    },
+    "update-password": {
+      "set-new-pass": "Set new password",
+      "new-password": "New password",
+      "new-password-confirm": "Confirm new password",
+      "submit": "Submit"
     }
   }
 }

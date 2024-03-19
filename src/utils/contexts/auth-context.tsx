@@ -45,8 +45,11 @@ export const AuthContextProvider = ({ children }: PropsWithChildren) => {
   //auth state listener fails to update session after login, so this will handle it instead
   const handleLogin = async (formData: FieldValues) => {
     const data = await signIn(formData);
-    setSession(data.session);
-    router.push('/');
+    console.log ('login data', data)
+    if (data.session) {
+      setSession(data.session);
+      router.push('/');
+    }
   };
 
   return (

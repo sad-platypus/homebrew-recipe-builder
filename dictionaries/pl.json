@@ -91,6 +91,7 @@
   "auth": {
     "sign-up-title": "Zarejestruj przez email",
     "sign-in-title": "Zaloguj przez email lub konto Google",
+    "forgot-password": "Zapomniałeś hasła?",
     "sign-in": {
       "email": "Email",
       "password": "Hasło",
@@ -119,6 +120,19 @@
     "sign-up-success": {
       "title": "Rejestracja przebiegła pomyślnie",
       "message": "Dziękujemy za założenie konta w serwisie. Przed pierwszym logowaniem należy aktywować konto poprzez link wysłany do Państwa na adres email podany podczas rejestracji."
+    },
+    "reset-password": {
+      "title": "Reset hasła",
+      "message-initial": "Podaj powiązany z kontem adres email, aby zresetować hasło",
+      "message-submitted": "Na podany adres email została wysłana wiadomość z dalszymi instrukcjami dotyczącymi resetowania hasła.",
+      "email": "Email",
+      "submit": "Wyślij"
+    },
+    "update-password": {
+      "set-new-pass": "Ustaw nowe hasło",
+      "new-password": "Nowe hasło",
+      "new-password-confirm": "Potwierdź nowe hasło",
+      "submit": "Potwierdź"
     }
   }
 }

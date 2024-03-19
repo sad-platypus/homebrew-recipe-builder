@@ -9,11 +9,11 @@ import { pick } from 'lodash';
 import { resetPassword } from '../../actions/reset-password';
 
 export const ResetPassword = () => {
-  // const t = useTranslations('auth.reset-password');
+  const t = useTranslations('auth.reset-password');
   const translations = useMessages();
 
   return (
-    <Card title="set new password">
+    <Card title={t('title')}>
       <NextIntlClientProvider messages={pick(translations, 'auth')}>
         <ResetPasswordForm handleReset={resetPassword} />
       </NextIntlClientProvider>

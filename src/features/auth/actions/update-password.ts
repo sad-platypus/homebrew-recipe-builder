@@ -1,5 +1,6 @@
 'use server';
 
+import { redirect } from '@/navigation';
 import { createClient } from '@/utils/supabase/server';
 
 export const updatePassword = async (newPassword: string) => {
@@ -8,8 +9,9 @@ export const updatePassword = async (newPassword: string) => {
     password: newPassword,
   });
   if (data) {
-    console.log('success!');
+    console.log('pass update success!');
+    redirect('/')
   } else if (error) {
-    console.log(error.message);
+    console.log('pass update error', error.message);
   }
 };

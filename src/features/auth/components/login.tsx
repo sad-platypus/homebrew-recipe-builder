@@ -27,7 +27,7 @@ export const Login = () => {
           <SignInForm />
           <GoogleOAuthButton />
 
-          <Link href="/login/reset-password">forgot pass?</Link>
+          <Link href="/login/reset-password">{t('forgot-password')}</Link>
         </Card>
 
         <Card
