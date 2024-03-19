@@ -34,7 +34,8 @@ export const Form = ({
     defaultValues: defaultValues,
   });
 
-  const submitHandler: SubmitHandler<FieldValues> = (data) => {
+  const submitHandler: SubmitHandler<FieldValues> = (data, event) => {
+    event?.preventDefault();
     onSubmit(data);
   };
 

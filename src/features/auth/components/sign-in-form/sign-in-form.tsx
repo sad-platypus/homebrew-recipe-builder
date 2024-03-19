@@ -5,14 +5,18 @@ import styles from './sign-in-form.module.scss';
 import { Form, InputField } from '@/components/form';
 import { useSignInSchema } from '../../hooks';
 import { Button } from '@/components/elements';
-import { signIn } from '../../actions/sign-in';
 import { FieldValues } from 'react-hook-form';
+import { useAuthContext } from '@/utils/contexts/auth-context';
+
 
 export const SignInForm = () => {
   const t = useTranslations('auth.sign-in');
   const schema = useSignInSchema();
+  const { handleLogin } = useAuthContext();
+
+
   const handleSubmit = (data: FieldValues) => {
-    signIn(data);
+    handleLogin(data);
   };
 
   return (

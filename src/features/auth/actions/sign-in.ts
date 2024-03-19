@@ -1,28 +1,26 @@
 'use server';
 
-import { revalidatePath } from 'next/cache';
-import { redirect } from '@/navigation';
 import { createClient } from '@/utils/supabase/server';
 import { FieldValues } from 'react-hook-form';
-import { getLocale } from 'next-intl/server';
-import { useSession } from '../hooks';
+import { revalidatePath } from 'next/cache';
 
 export const signIn = async (formData: FieldValues) => {
   const supabase = createClient();
-  const locale = await getLocale();
-  
-  const data = {
+
+  const loginData = {
     email: formData.signInEmail,
     password: formData.signInPassword,
   };
 
-  const { error } = await supabase.auth.signInWithPassword(data);
+  const { error, data } = await supabase.auth.signInWithPassword(loginData);
 
   if (error) {
     console.log(error);
     console.log(error.message);
-  } else {
-    revalidatePath(`/${locale}`, 'layout');
-    redirect('/');
+  } else if (data) {
+    console.log('signed in');
+    revalidatePath('/', 'layout');
   }
+ 
+  return data
 };

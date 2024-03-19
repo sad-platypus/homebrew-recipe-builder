@@ -47,6 +47,3 @@ export const InputField = ({
   );
 };
 
-// const [array, index, fieldName]: [string, number, string] = name.split('.');
-//   const fieldError = errors[array] ? errors[array][index][fieldName] : null;
-// trzebaby zamknac w funkcji i otypowac
