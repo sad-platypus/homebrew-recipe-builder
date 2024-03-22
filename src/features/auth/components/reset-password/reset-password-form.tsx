@@ -16,9 +16,9 @@ export const ResetPasswordForm = ({ handleReset }: ResetPasswordFormProps) => {
   const schema = useResetPasswordSchema();
   const [submitted, setSubmitted] = useState<boolean>(false);
 
-  const handleSubmit = async (data: FieldValues) => {
+  const handleSubmit = async (formData: FieldValues) => {
     try {
-      await handleReset(data.resetPasswordEmail);
+      await handleReset(formData.resetPasswordEmail);
       setSubmitted(true);
     } catch (error) {
       console.log(error);

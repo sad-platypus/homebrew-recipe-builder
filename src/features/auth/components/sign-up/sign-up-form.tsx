@@ -5,15 +5,29 @@ import { Form, InputField } from '@/components/form';
 import { useTranslations } from 'next-intl';
 import { useSignUpSchema } from '../../hooks';
 import styles from './sign-up-form.module.scss';
-import { signUp } from '../../actions/sign-up';
+import { signUp } from '../../actions';
 import { FieldValues } from 'react-hook-form';
+import { browserClient as supabase } from '@/utils/supabase/client';
 
 export const SignUpForm = () => {
-  const handleSubmit = (data: FieldValues) => {
-    signUp(data);
-  };
   const t = useTranslations('auth.sign-up');
   const schema = useSignUpSchema();
+
+  const handleSubmit = async (formData: FieldValues) => {
+    const { data, error } = await supabase
+      .from('profiles')
+      .select()
+      .eq('full_name', `${formData.signUpName}`);
+    console.log(data);
+    if (error) {
+      console.log('name check error', error);
+      return;
+    } else if (data.length > 0) {
+      alert(t('name-in-use'));
+      return;
+    }
+    signUp(formData);
+  };
 
   return (
     <Form

@@ -8,10 +8,12 @@ export const updatePassword = async (newPassword: string) => {
   const { data, error } = await supabase.auth.updateUser({
     password: newPassword,
   });
-  if (data) {
-    console.log('pass update success!');
-    redirect('/')
-  } else if (error) {
+
+  if (error) {
     console.log('pass update error', error.message);
+    redirect('/error-500');
+  } else if (data) {
+    console.log('pass update success!');
+    redirect('/my-profile');
   }
 };

@@ -1,2 +1,2 @@
-export * from './collapsible-card';
-export * from './card';
+export * from './collapsible-card/collapsible-card';
+export * from './card/card';

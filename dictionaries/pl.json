@@ -96,14 +96,16 @@
       "email": "Email",
       "password": "Hasło",
       "submit": "Zaloguj",
-      "google-login": "Zaloguj się z Google"
+      "google-login": "Zaloguj się z Google",
+      "invalid-credentials": "Nieprawidłowy login lub hasło"
     },
     "sign-up": {
       "email": "Email",
       "password": "Hasło",
       "confirm-password": "Potwierdź hasło",
       "name": "Nazwa użytkownika",
-      "submit": "Zarejestruj"
+      "submit": "Zarejestruj",
+      "name-in-use": "Nazwa użytkownika jest już zajęta"
     },
     "schemas": {
       "provide-email": "Należy podać email",
@@ -133,6 +135,15 @@
       "new-password": "Nowe hasło",
       "new-password-confirm": "Potwierdź nowe hasło",
       "submit": "Potwierdź"
+    },
+    "email-in-use": {
+      "title": "Błąd",
+      "message": "Podany email jest już powiązany z kontem użytkownika. Jeśli nie pamiętasz hasła, proszę skorzystać z opcji odzyskiwania znajdującej się poniżej formularza logowania.",
+      "button": "Powrót"
     }
+  },
+  "error-500": {
+    "title": "Błąd 500",
+    "message": "Coś poszło nie tak, prosimy spróbować później."
   }
 }

@@ -97,14 +97,16 @@
       "email": "Email",
       "password": "Password",
       "submit": "Log in",
-      "google-login": "Log in with Google"
+      "google-login": "Log in with Google",
+      "invalid-credentials": "Invalid login credentials"
     },
     "sign-up": {
       "email": "Email",
       "password": "Password",
       "confirm-password": "Confirm Password",
       "name": "Username",
-      "submit": "Register"
+      "submit": "Register",
+      "name-in-use": "Username already in use"
     },
     "schemas": {
       "provide-email": "Please provide an email",
@@ -134,6 +136,15 @@
       "new-password": "New password",
       "new-password-confirm": "Confirm new password",
       "submit": "Submit"
+    },
+    "email-in-use": {
+      "title": "Error",
+      "message": "The provided email is already associated with a user account. If you don't remember your password, please use the recovery option below the login form.",
+      "button": "Back"
     }
+  },
+  "error-500": {
+    "title": "Error 500",
+    "message": "Something went wrong, please try again later"
   }
 }

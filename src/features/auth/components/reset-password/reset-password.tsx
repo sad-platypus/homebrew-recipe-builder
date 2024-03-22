@@ -1,12 +1,12 @@
 import { Card } from '@/components/wrappers';
-import { ResetPasswordForm } from './';
+import { ResetPasswordForm } from '.';
 import {
   NextIntlClientProvider,
   useMessages,
   useTranslations,
 } from 'next-intl';
 import { pick } from 'lodash';
-import { resetPassword } from '../../actions/reset-password';
+import { resetPassword } from '../../actions';
 
 export const ResetPassword = () => {
   const t = useTranslations('auth.reset-password');

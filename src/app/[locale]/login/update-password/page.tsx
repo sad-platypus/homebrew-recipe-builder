@@ -1,5 +1,5 @@
-import { UpdatePassword } from '@/features/auth/components/password-reset';
+import { UpdatePassword } from '@/features/auth/components/reset-password';
 
 export default function UpdatePasswordPage() {
-   return <UpdatePassword />
+  return <UpdatePassword />;
 }
