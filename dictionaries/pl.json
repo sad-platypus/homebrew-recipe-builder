@@ -145,5 +145,8 @@
   "error-500": {
     "title": "Błąd 500",
     "message": "Coś poszło nie tak, prosimy spróbować później."
+  },
+  "recipe-builder": {
+    "title": "Stwórz nową recepturę"
   }
 }

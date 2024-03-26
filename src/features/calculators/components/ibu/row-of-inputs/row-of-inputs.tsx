@@ -1,7 +1,6 @@
 import { PropsWithChildren } from 'react';
 import styles from './row-of-inputs.module.scss';
 import { FieldError, FieldValues, FieldErrors } from 'react-hook-form';
-import { P } from '@/components/elements';
 
 type HopsRowFieldError = Partial<FieldError> & {
   weight: {

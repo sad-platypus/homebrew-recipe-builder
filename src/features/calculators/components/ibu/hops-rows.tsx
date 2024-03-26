@@ -1,9 +1,10 @@
 import { Button } from '@/components/elements';
-import { RowOfInputs, InputField } from '@/components/form';
+import {  InputField } from '@/components/form';
 import { useFieldArray, useFormContext } from 'react-hook-form';
 import styles from './ibu.module.scss';
 import { useTranslations } from 'next-intl';
 import { Dispatch, SetStateAction } from 'react';
+import { RowOfInputs } from './row-of-inputs/row-of-inputs';
 
 export const HopsRows = ({
   setFieldsLength,

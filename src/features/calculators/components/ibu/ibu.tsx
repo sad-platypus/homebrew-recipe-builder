@@ -2,7 +2,7 @@
 
 import { CollapsibleCard } from '@/components/wrappers';
 import { Button, P } from '@/components/elements';
-import { Form, InputField, RowOfInputs } from '@/components/form';
+import { Form, InputField } from '@/components/form';
 import { useTranslations } from 'next-intl';
 import styles from './ibu.module.scss';
 import { FieldValues } from 'react-hook-form';
